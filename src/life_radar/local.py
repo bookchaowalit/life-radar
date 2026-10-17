@@ -15,12 +15,17 @@ from cellkit.server import cell
 
 def main(argv: list[str] | None = None) -> int:
     spec = cell()
-    parser = argparse.ArgumentParser(prog="radar-local", description="run the local development database")
+    parser = argparse.ArgumentParser(
+        prog="radar-local", description="run the local development database"
+    )
     parser.add_argument("command", choices=("up", "down"))
     args = parser.parse_args(argv)
     cluster = default_cluster(spec)
     if not isinstance(cluster, LocalCluster):
-        print("radar-local only manages the local database (unset RADAR_DB_MODE)", file=sys.stderr)
+        print(
+            "radar-local only manages the local database (unset RADAR_DB_MODE)",
+            file=sys.stderr,
+        )
         return 2
     if args.command == "down":
         cluster.stop()
@@ -33,7 +38,9 @@ def main(argv: list[str] | None = None) -> int:
         cluster.start()
     cluster.bootstrap()
     applied = migrate(cluster)
-    print(f"local database up at {cluster.socket_dir}; {len(applied)} migrations applied")
+    print(
+        f"local database up at {cluster.socket_dir}; {len(applied)} migrations applied"
+    )
     return 0
 
 
