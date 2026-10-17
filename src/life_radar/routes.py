@@ -88,6 +88,7 @@ def register(ctx) -> None:
             rows = catalog(conn, category)
             mine = {
                 row["opportunity_id"]: row
+                # nosemgrep: python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query -- the table name comes from the cell spec (validated snake_case identifiers); values are bound as %s parameters
                 for row in conn.execute(
                     f"SELECT opportunity_id, status FROM {statuses} WHERE profile_id = %s",
                     (profile_id,),
