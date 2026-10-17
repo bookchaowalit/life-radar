@@ -1,0 +1,43 @@
+version: 1
+dataset: test-fixture
+items:
+- slug: test-working-holiday
+  name: Test Working Holiday
+  category: abroad/working-holiday
+  country: AU
+  nationalities: [TH]
+  thai_eligible: "yes"
+  min_age: 18
+  max_age: 30
+  age_basis: at_application
+  recurrence: rolling
+  prep_lead_time_months: 6
+  urgency: time_critical
+  source_url: https://example.org/whv
+  last_verified_at: 2026-10-17
+  verification_status: verified
+- slug: test-scholarship
+  name: Test Scholarship
+  category: education/scholarship/postgraduate
+  nationalities: ["*"]
+  thai_eligible: "yes"
+  max_age: 34
+  recurrence: annual
+  window_months: [4, 5]
+  prep_lead_time_months: 12
+  urgency: preparation_critical
+  source_url: https://example.org/scholarship
+  last_verified_at: 2026-10-17
+  verification_status: partially_verified
+- slug: test-licence
+  name: Test Licence
+  category: license/accounting
+  nationalities: [TH]
+  thai_eligible: "yes"
+  recurrence: annual
+  window_months: [3]
+  prep_lead_time_months: 36
+  urgency: evergreen
+  source_url: https://example.org/licence
+  last_verified_at: 2026-10-17
+  verification_status: verified

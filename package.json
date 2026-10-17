@@ -1,0 +1,8 @@
+{
+  "name": "life-radar-infra",
+  "private": true,
+  "description": "Railway Infrastructure as Code for the life-radar services (.railway/railway.ts)",
+  "devDependencies": {
+    "railway": "^3.13.1"
+  }
+}

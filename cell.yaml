@@ -1,0 +1,215 @@
+# Life Radar cell: a personal opportunity radar. One universal shape for every kind of life opportunity
+# (scholarships, working holidays, licences, competitions, grants, welfare rights...) plus the profiles it is
+# matched against and each profile's status per opportunity. The profile radar (GET /v1/profiles/{id}/radar,
+# POST /v1/radar) lives in src/life_radar/routes.py.
+cell: radar
+title: Life Radar
+extend: life_radar.routes:register
+resources:
+  opportunity:
+    table: opportunities
+    plural: opportunities
+    order: slug
+    filters:
+    - category
+    - country
+    - urgency
+    - recurrence
+    - thai_eligible
+    - verification_status
+    - status
+    fields:
+      slug:
+        type: text
+        required: true
+        unique: true
+        max_length: 120
+      name:
+        type: text
+        required: true
+        max_length: 300
+      name_th:
+        type: text
+        max_length: 300
+      description:
+        type: text
+      # Hierarchical, extensible path: "abroad/working-holiday", "education/scholarship/postgraduate".
+      category:
+        type: text
+        required: true
+        max_length: 200
+      country:
+        type: text
+        max_length: 8
+      region:
+        type: text
+      issuer:
+        type: text
+      official_url:
+        type: text
+      value_benefit:
+        type: text
+      cost:
+        type: text
+      # Eligibility. nationalities: ISO-3166 alpha-2 codes, or ["*"] for open to everyone.
+      nationalities:
+        type: json
+        json: array
+      thai_eligible:
+        type: enum
+        values: ["yes", "no", "partial", "unknown"]
+        default: unknown
+      min_age:
+        type: int
+        min: 0
+        max: 120
+      max_age:
+        type: int
+        min: 0
+        max: 120
+      age_basis:
+        type: enum
+        values: [at_application, at_start, at_deadline, calendar_year, unspecified]
+        default: unspecified
+      gender:
+        type: enum
+        values: [any, male, female]
+        default: any
+      min_education:
+        type: enum
+        values: [none, secondary, vocational, bachelor, master, doctorate]
+        default: none
+      # Non-empty: must currently be enrolled at one of these levels (student-only opportunities).
+      enrollment_required:
+        type: json
+        json: array
+      education_text:
+        type: text
+      profession:
+        type: text
+      conditions_text:
+        type: text
+      conditions:
+        type: json
+        json: object
+      # Window.
+      recurrence:
+        type: enum
+        values: [rolling, annual, one_off, cohort]
+        default: annual
+      open_date:
+        type: date
+      close_date:
+        type: date
+      window_months:
+        type: json
+        json: array
+      quota:
+        type: text
+      attempts_limit:
+        type: int
+        min: 1
+      # Preparation.
+      prep_lead_time_months:
+        type: int
+        min: 0
+        max: 240
+        default: 0
+      prerequisites:
+        type: json
+        json: array
+      urgency:
+        type: enum
+        values: [time_critical, preparation_critical, evergreen]
+        default: evergreen
+      # Provenance.
+      source_url:
+        type: text
+      last_verified_at:
+        type: date
+      verification_status:
+        type: enum
+        values: [verified, partially_verified, unverified, stale]
+        default: unverified
+      verification_notes:
+        type: text
+      status:
+        type: enum
+        values: [active, suspended, discontinued]
+        default: active
+      tags:
+        type: json
+        json: array
+  profile:
+    table: profiles
+    plural: profiles
+    fields:
+      display_name:
+        type: text
+        required: true
+        max_length: 200
+      birthdate:
+        type: date
+        required: true
+      # ISO-3166 alpha-2, e.g. TH; other passports go in other_nationalities.
+      nationality:
+        type: text
+        required: true
+        max_length: 2
+      other_nationalities:
+        type: json
+        json: array
+      gender:
+        type: enum
+        values: [unspecified, male, female, other]
+        default: unspecified
+      # Highest level completed, and the level currently studied (none when not a student).
+      education_level:
+        type: enum
+        values: [none, secondary, vocational, bachelor, master, doctorate]
+        default: none
+      enrolled_in:
+        type: enum
+        values: [none, secondary, vocational, bachelor, master, doctorate]
+        default: none
+      profession:
+        type: text
+      country_of_residence:
+        type: text
+        max_length: 2
+      interests:
+        type: json
+        json: array
+      notes:
+        type: text
+  opportunity-status:
+    table: opportunity_statuses
+    plural: opportunity-statuses
+    unique:
+    - [profile_id, opportunity_id]
+    filters:
+    - profile_id
+    - opportunity_id
+    - status
+    fields:
+      profile_id:
+        type: ref
+        to: profile
+        required: true
+      opportunity_id:
+        type: ref
+        to: opportunity
+        required: true
+      status:
+        type: enum
+        values: [interested, preparing, applied, accepted, rejected, missed, not_eligible, dismissed]
+        default: interested
+      target_cycle:
+        type: text
+        max_length: 50
+      next_action:
+        type: text
+      next_action_on:
+        type: date
+      notes:
+        type: text

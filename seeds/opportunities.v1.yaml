@@ -1,0 +1,2951 @@
+# Life Radar seed catalog. Load with: radar-seed db --workspace <uuid>  (or radar-seed api ...)
+# Append-only by version: a new curation round is opportunities.v2.yaml.
+version: 1
+dataset: 'life-radar seed v1: age-gated opportunities relevant to Thai citizens'
+curated_on: '2026-10-17'
+method: each row researched on the official source page (web search + fetch) on the date in last_verified_at; facts
+  not confirmed there are marked partially_verified/unverified with the reason in verification_notes
+count: 57
+items:
+- slug: au-work-and-holiday-462-th
+  name: Australia Work and Holiday visa (subclass 462) - Thailand
+  name_th: โครงการตรวจลงตราทำงานและท่องเที่ยวไทย-ออสเตรเลีย (Work and Holiday Visa)
+  description: Lets Thai passport holders aged 18-30 holiday and do short-term work in Australia for 12 months,
+    with the option of a second (and third) year after specified regional work. Thailand has an annual country cap
+    and needs a Thai government letter of support, so the age-31 cut-off and cap timing matter.
+  category: abroad/working-holiday
+  country: AU
+  region: Asia-Pacific
+  issuer: 'Australian Department of Home Affairs (letter of support: Thai Department of Children and Youth, MSDHS)'
+  official_url: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462/first-work-holiday-462
+  value_benefit: '12-month visa: work short-term, study up to 4 months, unlimited re-entry; 3 months of specified
+    work makes you eligible for a second Work and Holiday visa'
+  cost: Visa application charge (check Home Affairs Visa Pricing Estimator); plus funds of about AUD 5,000 and onward
+    fare, possible health checks/police certificates/biometrics; English test fee
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 18
+  max_age: 30
+  age_basis: at_application
+  gender: any
+  min_education: bachelor
+  education_text: 'Thailand row: ''You must have a tertiary qualification from a university, college or training
+    centre.'' Acceptable: degrees, graduate certificate, diplomas. Not acceptable: Certificate I-IV, Senior Secondary
+    Certificate of Education.'
+  conditions_text: '''You must be 18 to 30 years old (inclusive) when you apply... You must apply for your visa
+    before you turn 31 years old'' (deadline midnight AEST the day before 31st birthday). Must apply from outside
+    Australia, no dependent children, not previously entered on a 462/417. Thailand is on the list requiring a letter
+    of support from your government. At least Functional English (e.g. IELTS Academic/General average 4.5, test
+    within 12 months). About AUD 5,000 funds. Thailand is not subject to the pre-application ballot (only China,
+    India, Vietnam; Indonesia moving to ballot).'
+  conditions:
+    letter_of_support: Thai government (Department of Children and Youth)
+    english: Functional English, e.g. IELTS 4.5 average, test within 12 months
+    funds_aud: 5000
+    ballot: false
+    annual_cap_thailand: 2000
+  recurrence: annual
+  quota: 2,000 first Work and Holiday visas per program year (1 July-30 June) for Thailand; status 'Open' on Home
+    Affairs caps page
+  attempts_limit: 1
+  prep_lead_time_months: 4
+  prerequisites:
+  - Thai passport
+  - tertiary qualification (degree/diploma/graduate certificate)
+  - Functional English (IELTS 4.5 avg or equivalent, within 12 months)
+  - Thai government letter of support (DCY)
+  - ~AUD 5,000 funds
+  urgency: time_critical
+  source_url: https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462/first-work-holiday-462
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: 'Verified on Home Affairs 462 page (age 18-30 inclusive, apply before 31st birthday; Thailand
+    education rule; Thailand requires letter of support; ballot only for CN/IN/VN) and Status of country caps page
+    (Thailand: Open, cap 2,000). Functional English scores verified on Home Affairs Functional English page (IELTS
+    4.5). Not verified: Thai-side DCY letter-of-support application dates/selection method for 2026-27 (dcy.go.th
+    is a JS app that could not be read; a non-official IDP article mentions a first round on 8 June 2026), and the
+    exact current visa charge.'
+  tags:
+  - age-gated
+  - working-holiday
+  - once-in-lifetime
+  - under-31
+  - country-cap
+  - government-letter-required
+- slug: nz-thailand-working-holiday-th
+  name: New Zealand Thailand Working Holiday Visa
+  name_th: โครงการ Working Holiday Scheme ไทย-นิวซีแลนด์
+  description: 'New Zealand working holiday scheme for Thai citizens aged 18-30: up to 12 months to travel and do
+    temporary work. Only 100 places a year and requires a degree-level qualification and a DCY letter of support.'
+  category: abroad/working-holiday
+  country: NZ
+  region: Asia-Pacific
+  issuer: 'Immigration New Zealand (letter of support: Thai Department of Children and Youth)'
+  official_url: https://immigration.govt.nz/visas/thailand-working-holiday-visa
+  value_benefit: Stay up to 12 months; temporary work (max 3 months per employer), study/training up to 6 months;
+    possible 3-month extension for certain industries
+  cost: Visa fee from NZD 770; NZD 7,000 living funds plus fare; full medical insurance
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 18
+  max_age: 30
+  age_basis: at_application
+  gender: any
+  min_education: bachelor
+  education_text: Tertiary qualification involving at least 3 years of full-time study.
+  conditions_text: '''aged 18 to 30''. Thai citizen; speak and understand English (English-taught tertiary study/schooling
+    or acceptable test within 2 years); letter of support from the Department of Children and Youth (obtain before
+    applying if outside Thailand); NZD 7,000 funds; full medical insurance; passport valid 3 months beyond visa;
+    not had an NZ working holiday visa before.'
+  conditions:
+    funds_nzd: 7000
+    letter_of_support: Department of Children and Youth
+    english: evidence required (test <2 years old or English-medium study)
+  recurrence: annual
+  quota: 100 visas per year
+  attempts_limit: 1
+  prep_lead_time_months: 4
+  prerequisites:
+  - Thai passport
+  - 3-year full-time tertiary qualification
+  - English evidence
+  - DCY letter of support
+  - NZD 7,000 funds
+  - medical insurance
+  urgency: time_critical
+  source_url: https://immigration.govt.nz/visas/thailand-working-holiday-visa
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: All eligibility facts verified on the Immigration NZ Thailand Working Holiday Visa page (shown
+    as 'Open', 100 places/year, from NZD 770). The page gives no opening/closing dates; when the 100 places for
+    the year open/fill was not confirmed.
+  tags:
+  - age-gated
+  - working-holiday
+  - once-in-lifetime
+  - under-31
+  - small-quota
+  - government-letter-required
+- slug: young-smart-farmer-th
+  name: Young Smart Farmer
+  name_th: เกษตรกรรุ่นใหม่ (Young Smart Farmer)
+  description: Department of Agricultural Extension programme that trains and networks young farmers and links them
+    to support such as BAAC loans. Age-capped, so worth joining before your mid-40s if you plan to farm.
+  category: business/agriculture
+  country: TH
+  region: Thailand
+  issuer: Department of Agricultural Extension (กรมส่งเสริมการเกษตร)
+  official_url: https://www.doae.go.th/
+  value_benefit: Training, networks, eligibility for linked BAAC young-farmer credit schemes
+  cost: Free
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 17
+  max_age: 45
+  age_basis: unspecified
+  gender: any
+  min_education: none
+  conditions_text: 'Government spokesperson description: young farmers "aged 17-45" who have started farming, are
+    committed to self-development and are registered as farmers with the Department of Agricultural Extension. A
+    2024 BAAC/DOAE loan scheme targets those "not over 45".'
+  conditions:
+    farmer_registration_required: true
+  recurrence: annual
+  prep_lead_time_months: 3
+  prerequisites:
+  - registered farmer (ทะเบียนเกษตรกร)
+  - active farming
+  urgency: time_critical
+  source_url: https://www.matichon.co.th/politics/news_837012
+  last_verified_at: '2026-10-17'
+  verification_status: unverified
+  verification_notes: Age range 17-45 comes only from a Matichon news report quoting a government spokesperson (around
+    2018) and a 2024 BAAC loan scheme ('not over 45'). No current DOAE criteria page was found or fetched; application
+    timing is via provincial agriculture offices and was not confirmed.
+  tags:
+  - age-gated
+  - agriculture
+  - farmer
+  - youth
+- slug: thai-airways-student-pilot
+  name: Thai Airways Student Pilot Recruitment
+  name_th: การบินไทย รับสมัครนักบินฝึกหัด
+  description: 'Thai Airways'' ab-initio cadet scheme: the airline selects and trains candidates with no flying
+    experience to become airline pilots. It runs roughly once a year.'
+  category: career/aviation
+  country: TH
+  region: Thailand
+  issuer: Thai Airways International PCL
+  official_url: https://career.thaiairways.com/student-pilot-recruitment-2026/
+  value_benefit: Airline-sponsored ab-initio pilot training towards a commercial pilot career with Thai Airways.
+  cost: 2,800 THB application fee (training bond/cost not stated)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 18
+  max_age: 32
+  age_basis: at_deadline
+  gender: any
+  min_education: bachelor
+  education_text: Bachelor's degree or higher in any field, GPA >= 2.50; final-year undergraduates at recognised
+    Thai institutions may apply if they finish by 31 Jul 2027.
+  conditions_text: 'Graduates: ''อายุไม่เกิน 32 ปี'' (born on or after 4 Mar 1994). Non-graduates: 18-32 on the
+    closing date. Thai nationality; military obligation completed; height >= 165 cm (men) / 160 cm (women); BMI
+    <= 30; vision limits; no existing CPL; THAI TEP >= 63 or TOEIC >= 650.'
+  conditions:
+    height_cm_male: 165
+    height_cm_female: 160
+    bmi_max: 30
+    english: THAI TEP 63 or TOEIC 650
+    gpa_min: 2.5
+    military_service_completed: true
+  recurrence: annual
+  open_date: '2026-03-09'
+  close_date: '2026-03-31'
+  window_months:
+  - 3
+  prep_lead_time_months: 6
+  prerequisites:
+  - bachelor's degree (GPA 2.50)
+  - TOEIC 650 or THAI TEP 63
+  - Class 1 medical fitness
+  - military obligation cleared
+  urgency: time_critical
+  source_url: https://career.thaiairways.com/student-pilot-recruitment-2026/
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: All criteria confirmed today on the official Thai Airways 2026 recruitment page. The 2026
+    window has closed; the next intake (likely Mar 2027) is not announced. The page states no number of places and
+    no training bond.
+  tags:
+  - age-gated
+  - aviation
+  - cadet
+- slug: th-assistant-judge-exam
+  name: Assistant Judge (Judge-Trainee) Selection Exam
+  name_th: สอบคัดเลือกผู้ช่วยผู้พิพากษา
+  description: Competitive exam run by the Judicial Commission (ก.ต.) to recruit trainee judges for the Courts of
+    Justice. There are several tracks (สนามใหญ่/สนามเล็ก/สนามจิ๋ว), each with a minimum age and experience requirements.
+  category: career/government
+  country: TH
+  region: Thailand
+  issuer: Office of the Judiciary / Judicial Commission (สำนักงานศาลยุติธรรม / ก.ต.)
+  official_url: https://www.coj.go.th/th/newsmanagement/page/index/id/3
+  value_benefit: Appointment as assistant judge leading to a career judgeship (to age 65+).
+  cost: Application fee (not verified)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 25
+  age_basis: at_application
+  gender: any
+  min_education: bachelor
+  education_text: LL.B. plus Thai Bar (Netibandit). The small and mini tracks also require a Thai LL.M., a foreign
+    law degree or similar.
+  profession: 'Big track: at least 2 years of legal practice; small track: generally at least 1 year'
+  conditions_text: 'Sec. 26, Judicial Service Act B.E. 2543: ''อายุไม่ต่ำกว่า 25 ปีบริบูรณ์'' (35 for special selection);
+    Thai nationality by birth; Thai Bar member; medical and psychological exam.'
+  conditions:
+    thai_by_birth: true
+    bar_required: true
+    legal_practice_years_big_track: 2
+  recurrence: annual
+  prep_lead_time_months: 36
+  prerequisites:
+  - LL.B.
+  - Netibandit (Thai Bar)
+  - 2 years legal practice (big track)
+  urgency: preparation_critical
+  source_url: https://www.ilaw.or.th/articles/4654
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Minimum age 25, nationality by birth, Bar requirement and track rules are taken from iLaw's
+    article on the Judicial Service Act. The official COJ home page has no 2026/2027 exam notice; dates vary by
+    year (e.g. a 2024 announcement dated 11 Jun 2024). The act's text was not read directly.
+  tags:
+  - min-age
+  - law
+  - government
+  - long-prep
+- slug: google-summer-of-code
+  name: Google Summer of Code (GSoC)
+  description: Paid remote open-source programme where contributors work 12+ weeks with a mentoring organisation.
+    Open to students and open-source beginners aged 18+, and you can only be accepted twice in a lifetime.
+  category: career/open-source
+  country: INT
+  region: Global
+  issuer: Google
+  official_url: https://summerofcode.withgoogle.com/
+  value_benefit: Stipend (scaled by country and project size) plus mentorship and open-source track record
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  min_age: 18
+  age_basis: at_application
+  gender: any
+  min_education: none
+  education_text: Must be a student OR an open-source beginner (regular open-source contributors do not qualify).
+  conditions_text: '"18+ years old at registration"; "Student or Open source beginner"; "Accepted into GSoC no more
+    than once previously". Residents of US-embargoed countries, Russia, Belarus and DNR/LNR are ineligible.'
+  conditions:
+    max_acceptances: 2
+  recurrence: annual
+  window_months:
+  - 3
+  attempts_limit: 2
+  prep_lead_time_months: 3
+  prerequisites:
+  - early contributions to a mentoring org
+  - project proposal
+  urgency: time_critical
+  source_url: https://developers.google.com/open-source/gsoc/faq
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: Eligibility quoted from the official GSoC FAQ. 2026 contributor applications ran 16-31 March
+    2026 (official timeline page); 2027 dates not yet published, so window_months=[3].
+  tags:
+  - age-18-plus
+  - lifetime-limit
+  - remote
+  - stipend
+  - open-source
+- slug: adb-young-professionals-program
+  name: Asian Development Bank Young Professionals Program (YPP)
+  description: ADB's entry route for young professionals into international staff positions at its Manila headquarters,
+    open to nationals of ADB member countries such as Thailand.
+  category: career/young-professional
+  country: INT
+  region: Asia-Pacific
+  issuer: Asian Development Bank
+  official_url: https://www.adb.org/node/569191
+  value_benefit: International staff appointment at ADB (Manila) with rotations; international salary and benefits.
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  max_age: 32
+  age_basis: unspecified
+  gender: any
+  min_education: bachelor
+  education_text: At least a first-level university degree with a solid academic record in a relevant field.
+  profession: At least 3 years of work experience relevant to ADB (internships count)
+  conditions_text: '''32 years old and below''; only applicants in this range are considered. Must be a citizen
+    of an ADB member country.'
+  conditions:
+    work_experience_years_min: 3
+    member_country_citizen: true
+  recurrence: annual
+  window_months:
+  - 9
+  prep_lead_time_months: 6
+  prerequisites:
+  - bachelor's degree
+  - 3 years relevant experience
+  - ADB member nationality
+  urgency: time_critical
+  source_url: https://www.adb.org/node/569191
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: Age, nationality, education and experience confirmed on the ADB careers page; the page says
+    applications open in early September and none are open now. The date age is measured on is not stated officially
+    (secondary sources say it is the joining date). A news report gives 1-30 Sep 2026 for the latest cycle, but
+    ADB did not confirm it, so the dates are left null. Thailand is an ADB member.
+  tags:
+  - age-gated
+  - international-organisation
+- slug: imf-economist-program
+  name: IMF Economist Program (EP)
+  description: 'The IMF''s main entry route for new PhD economists: a rotational programme that leads to a staff
+    economist career in Washington DC.'
+  category: career/young-professional
+  country: INT
+  region: Global
+  issuer: International Monetary Fund
+  official_url: https://www.imf.org/en/about/careers/economist-program
+  value_benefit: Two-year rotational economist appointment at the IMF in Washington DC, normally leading to an open-ended
+    staff position.
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  max_age: 33
+  age_basis: at_start
+  gender: any
+  min_education: doctorate
+  education_text: Recent PhD in economics or a related field, or one completed within the past year (or about to
+    be).
+  conditions_text: '''Under 34 at the time of entry.'' Must be a national of an IMF member country (secondary postings).'
+  recurrence: annual
+  window_months:
+  - 9
+  - 10
+  - 11
+  - 12
+  prep_lead_time_months: 12
+  prerequisites:
+  - PhD in economics (recent or near completion)
+  urgency: time_critical
+  source_url: https://www.imf.org/en/about/careers/economist-program
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: Age ('Under 34 at the time of entry') and the PhD rule confirmed on the official IMF page.
+    The page describes the annual cycle (open Sep, close Dec, start Sep) but gives no 2027 dates. The nationality
+    rule comes from secondary postings; Thailand is an IMF member.
+  tags:
+  - age-gated
+  - phd-required
+  - international-organisation
+- slug: un-young-professionals-programme
+  name: United Nations Young Professionals Programme (YPP)
+  description: Annual competitive entrance exam for entry-level (P-1/P-2) professional posts in the UN Secretariat,
+    open only to nationals of un- or under-represented member states listed each year.
+  category: career/young-professional
+  country: INT
+  region: Global
+  issuer: United Nations Secretariat (Office of Human Resources)
+  official_url: https://careers.un.org/young-professionals-programme
+  value_benefit: Two-year fixed-term P-1/P-2 appointment in the UN Secretariat with path to continuing appointment;
+    international salary and benefits.
+  cost: Free
+  thai_eligible: 'no'
+  max_age: 32
+  age_basis: calendar_year
+  gender: any
+  min_education: bachelor
+  education_text: At least a first-level university degree relevant to the exam subject.
+  conditions_text: '''32 years old or younger in the year of the exam'' (for 2026: born on or after 1 January 1994,
+    per secondary listings). Must be a national of a participating country on that year''s list; fluent in English
+    or French.'
+  conditions:
+    participating_country_list: changes yearly
+    languages: English or French
+  recurrence: annual
+  window_months:
+  - 10
+  - 11
+  prep_lead_time_months: 6
+  prerequisites:
+  - bachelor's degree in exam field
+  - fluent English or French
+  - nationality of a participating country
+  urgency: time_critical
+  source_url: https://www.un.org/en/academic-impact/work4un-young-professionals-programme
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Age (32 or younger in exam year), degree and language rules confirmed on un.org Academic Impact
+    page. careers.un.org is JavaScript-only, so the official country list could not be read. Thailand is NOT on
+    the 2025-26 participating list (seen on OpenIGO, which says it is not affiliated with the UN). Partial 2026
+    lists on Global South Opportunities and Opportunity Desk also omit Thailand. thai_eligible is set to 'no' on
+    that basis. Re-check every year, because Thailand could be added.
+  tags:
+  - age-gated
+  - un
+  - exam
+  - country-list-varies
+- slug: world-bank-young-professionals-program
+  name: World Bank Group Young Professionals Program (YPP)
+  description: Flagship entry programme into the World Bank Group in Washington DC for early-career development
+    professionals. It no longer has an age cap; eligibility is now set by 2-6 years of experience.
+  category: career/young-professional
+  country: INT
+  region: Global
+  issuer: World Bank Group
+  official_url: https://www.worldbank.org/en/about/careers/programs-and-internships/young-professionals-program
+  value_benefit: Full-time World Bank Group staff appointment starting with a structured YP programme in Washington
+    DC; international salary and benefits.
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: master
+  education_text: Minimum graduate-level degree (or higher) in a relevant field, completed before the September
+    start; a substantially complete PhD can count.
+  profession: 2-6 years of relevant full-time professional experience as of 1 September (doctoral research may count)
+  conditions_text: 'Official page: eligibility is based on professional experience, not age; there is no age limit.
+    At least two and no more than six years of qualifying experience as of 1 September 2026. Excellent English is
+    mandatory.'
+  conditions:
+    work_experience_years_min: 2
+    work_experience_years_max: 6
+    english: excellent
+  recurrence: annual
+  open_date: '2026-09-01'
+  close_date: '2026-09-30'
+  window_months:
+  - 9
+  prep_lead_time_months: 9
+  prerequisites:
+  - master's degree
+  - 2-6 years relevant experience
+  - excellent English
+  urgency: time_critical
+  source_url: https://www.worldbank.org/en/about/careers/programs-and-internships/young-professionals-program
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: 'Confirmed on the official page today: no age requirement, 2-6 years of experience, 2026 window
+    1-30 Sep 2026, cohort starts Sep 2027. The page did not state the nationality rule in so many words; Thailand
+    is a World Bank member. Urgency is time_critical because the 6-year experience cap acts like an age gate and
+    the window is only one month.'
+  tags:
+  - experience-capped
+  - deadline-gated
+  - international-organisation
+- slug: yseali-professional-fellows-program-th
+  name: YSEALI Professional Fellows Program
+  description: Fully funded 5-6 week U.S. fellowship placing mid-career Southeast Asian professionals aged 25-35
+    in U.S. organisations, followed by a reciprocal programme.
+  category: career/young-professional
+  country: US
+  region: Asia-Pacific
+  issuer: U.S. Department of State, Bureau of Educational and Cultural Affairs
+  official_url: https://exchanges.state.gov/non-us/program/yseali-professional-fellows-program
+  value_benefit: Fully funded 5-6 week professional placement in the U.S.
+  cost: No application fee
+  nationalities:
+  - TH
+  - BN
+  - MM
+  - KH
+  - ID
+  - LA
+  - MY
+  - PH
+  - SG
+  - TL
+  - VN
+  thai_eligible: 'yes'
+  min_age: 25
+  max_age: 35
+  age_basis: at_start
+  gender: any
+  min_education: none
+  profession: Currently employed with 2+ years of relevant professional experience
+  conditions_text: '''Be 25 to 35 years old at the start of the program''; citizen and current resident of a YSEALI
+    country; currently employed; two or more years of relevant professional work experience; demonstrated proficiency
+    in written and oral English.'
+  conditions:
+    work_experience_years: 2
+    english: demonstrated written and oral proficiency
+  recurrence: cohort
+  attempts_limit: 1
+  prep_lead_time_months: 2
+  prerequisites:
+  - 2+ years relevant work experience
+  - current employment
+  - English proficiency
+  urgency: time_critical
+  source_url: https://exchanges.state.gov/non-us/program/yseali-professional-fellows-program
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: Age (25-35 at start), employment, experience and English requirements verified on exchanges.state.gov.
+    Thai public application dates for the next cohort not found; window_months left empty.
+  tags:
+  - age-gated
+  - under-36
+  - fully-funded
+  - usa
+  - fellowship
+- slug: james-dyson-award-th
+  name: James Dyson Award
+  description: International design-engineering competition for students and recent graduates; Thailand has been
+    an eligible country since 2022. National winners get cash and a shot at the international prize.
+  category: competition/design-engineering
+  country: INT
+  region: Global
+  issuer: James Dyson Foundation
+  official_url: https://www.jamesdysonaward.org/
+  value_benefit: Thai national winner about THB 224,000; international winner up to about THB 1,345,000 (approx.
+    GBP 30,000)
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: none
+  education_text: Current university students of engineering, product design or industrial design, or those who
+    graduated in these subjects within the last four years (degree apprentices included). Must have studied in an
+    eligible country such as Thailand.
+  conditions_text: No age limit; eligibility window is "enrolled, or have been within the last four years" in an
+    undergraduate or graduate engineering/design course. Team leader must meet the subject rule.
+  conditions:
+    graduated_within_years: 4
+    subjects:
+    - engineering
+    - product design
+    - industrial design
+  recurrence: annual
+  window_months:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  prep_lead_time_months: 6
+  prerequisites:
+  - working prototype
+  - design report and video
+  urgency: time_critical
+  source_url: https://www.eng.chula.ac.th/?p=33331
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Official jamesdysonaward.org returned HTTP 403 to our fetcher. Eligibility (students or graduates
+    within 4 years, Thailand eligible since 2022) and prize amounts come from search results of Chulalongkorn/KMUTNB
+    announcements and Bangkok Post. 2026 deadline reported as 15 July 2026 (passed); 2027 dates not published.
+  tags:
+  - student
+  - recent-graduate
+  - 4-year-window
+  - design
+  - engineering
+- slug: icpc-regional-contest
+  name: ICPC International Collegiate Programming Contest (Regionals / World Finals)
+  description: The world's best-known university team programming contest; teams of three from one university compete
+    in regional contests (Thailand teams usually enter Asia regionals) to qualify for the World Finals. Eligibility
+    is capped by birth year / year of starting university, so it closes for good a few years into higher education.
+  category: competition/programming
+  country: INT
+  region: Global
+  issuer: ICPC Foundation
+  official_url: https://icpc.global/
+  value_benefit: World Finals qualification, medals, prizes and strong recruiter visibility
+  cost: Usually low or free; some regionals charge a team fee
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  age_basis: calendar_year
+  gender: any
+  min_education: secondary
+  enrollment_required:
+  - bachelor
+  - master
+  - doctorate
+  education_text: Must be enrolled in a degree programme at the team institution with at least a half-time load
+    (co-op, exchange and intern students are not excluded).
+  conditions_text: '2025/26 rules: "A student who meets the Basic Requirements and FIRST began post-secondary studies
+    in 2021 or later is eligible to compete" OR "was born in 2005 or later". "A student who has competed in two
+    ICPC World Finals is NOT eligible"; "A student who has competed in qualifying regional contests during five
+    different contest years is NOT eligible". Cutoff years move forward one year each season.'
+  conditions:
+    began_postsecondary_on_or_after_2025_26: 2021
+    born_on_or_after_2025_26: 2005
+    max_world_finals: 2
+    max_regional_years: 5
+    team_size: 3
+  recurrence: annual
+  window_months:
+  - 8
+  - 9
+  - 10
+  - 11
+  attempts_limit: 2
+  prep_lead_time_months: 12
+  prerequisites:
+  - competitive programming practice (algorithms, data structures)
+  - team of 3 from the same university
+  - coach from the university
+  urgency: time_critical
+  source_url: https://nc.na.icpc.global/rules/
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: 'Fetched the official ICPC regional rules page (nc.na.icpc.global/rules, labelled 2026-2027
+    season but text is Regionals 2025/26): born 2005+ or began post-secondary 2021+, 2 World Finals and 5 regional-year
+    limits, half-time enrolment. The 2026/27 cutoffs (likely 2006/2022 by the yearly pattern) are not confirmed.
+    Asia regional dates for Thailand teams vary by host; window_months is an estimate.'
+  tags:
+  - age-gated
+  - birth-year-cutoff
+  - university
+  - team
+  - lifetime-limit
+- slug: hult-prize
+  name: Hult Prize
+  description: Global student social-entrepreneurship startup competition with a USD 1 million seed prize; Thai
+    university teams can enter via campus or open rounds.
+  category: competition/startup
+  country: INT
+  region: Global
+  issuer: Hult Prize Foundation
+  official_url: https://www.hultprize.org/
+  value_benefit: USD 1,000,000 seed funding for the winning team; accelerator and network
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  min_age: 18
+  age_basis: at_deadline
+  gender: any
+  min_education: secondary
+  enrollment_required:
+  - bachelor
+  - master
+  - doctorate
+  education_text: All team members must currently be students enrolled in a degree-seeking programme at any university
+    or college.
+  conditions_text: '"All members of the team must be at least 18 years of age by February 28th, 2027 to compete."
+    Teams of 2-4 members, all currently enrolled degree-seeking students.'
+  conditions:
+    team_size: 2-4
+    age_cutoff_date: '2027-02-28'
+  recurrence: annual
+  window_months:
+  - 9
+  - 10
+  - 11
+  - 12
+  prep_lead_time_months: 4
+  prerequisites:
+  - team of 2-4 students
+  - social-impact startup idea
+  urgency: evergreen
+  source_url: https://www.hultprize.org/register
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Fetched hultprize.org home (confirms student startup competition, USD 1M prize). Age-18-by-2027-02-28,
+    2-4 member and degree-seeking enrolment rules come from the official register page as shown in search results
+    (not fetched directly). Cycle registration reported to start in September; exact 2026-27 dates not confirmed.
+  tags:
+  - student
+  - startup
+  - social-impact
+  - team
+- slug: microsoft-imagine-cup-2027
+  name: Microsoft Imagine Cup 2027
+  description: Microsoft's global startup competition, now aimed at early-stage startups building AI/enterprise
+    solutions, with a dedicated Student Startup category. Founders must be 18+ and the startup must be newly founded.
+  category: competition/startup
+  country: INT
+  region: Global
+  issuer: Microsoft
+  official_url: https://imaginecup.microsoft.com/
+  value_benefit: Global Top 20 recognition, World Championship; prize details per official rules
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  min_age: 18
+  age_basis: at_application
+  gender: any
+  min_education: none
+  education_text: 'Student Startup category only: all team members must be current registered students at accredited
+    institutions. Other categories have no student requirement.'
+  conditions_text: Applicants "must be at least 18 years old"; startup must be a registered legal entity founded
+    on or after 15 October 2024; up to four team members. Residents of Cuba, Iran, Belarus, North Korea, Sudan,
+    Syria, Russia, Crimea, Donetsk and Luhansk are ineligible.
+  conditions:
+    startup_founded_on_or_after: '2024-10-15'
+    team_size_max: 4
+  recurrence: annual
+  close_date: '2027-02-28'
+  window_months:
+  - 10
+  - 11
+  - 12
+  - 1
+  - 2
+  prep_lead_time_months: 4
+  prerequisites:
+  - registered company (founded on/after 2024-10-15)
+  - working product/MVP
+  urgency: time_critical
+  source_url: https://imaginecup-stg.microsoft.com/en-us/support/faq
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Rules read from Microsoft's Imagine Cup FAQ on the staging host (imaginecup-stg.microsoft.com);
+    the production site only says 'Imagine Cup 2027 - Coming Soon'. Close date 2027-02-28 and the new startup-entity
+    rule should be re-checked on the production Official Rules once published. Open date not confirmed. Thailand
+    is not on the excluded list.
+  tags:
+  - age-18-plus
+  - startup
+  - student-category
+  - deadline
+- slug: worldskills-competition-th
+  name: WorldSkills Competition (Thailand national team)
+  name_th: การแข่งขันฝีมือแรงงานนานาชาติ (WorldSkills)
+  description: The 'skills Olympics' held every two years; Thailand is a WorldSkills member and selects its team
+    through national skills competitions run by the Department of Skill Development. Hard age cap of 22 (25 in some
+    technical skills) in the competition year.
+  category: competition/vocational-skills
+  country: INT
+  region: Global
+  issuer: WorldSkills International; in Thailand the Department of Skill Development (กรมพัฒนาฝีมือแรงงาน), Ministry
+    of Labour
+  official_url: https://worldskills.org/get-involved/how-compete/
+  value_benefit: Represent Thailand internationally; medals, training camps, career recognition
+  cost: Team costs are normally covered by the national member body
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  max_age: 22
+  age_basis: calendar_year
+  gender: any
+  min_education: none
+  conditions_text: '"For most skill competitions, Competitors must not be older than 22 years in the calendar year
+    of the Competition." Exceptions where "Competitors must not be older than 25 years in the year of the Competition":
+    Additive Manufacturing, Aircraft Maintenance, Digital Construction, Cloud Computing, Cyber Security, Industrial
+    Design Technology, Industry 4.0, Information Network Cabling, Mechatronics, Manufacturing Team Challenge, Optoelectronic
+    Technology, Robot Systems Integration, Water Technology.'
+  conditions:
+    max_age_exception_skills: 25
+    next_competition: WorldSkills Aichi 2028, 2028-11-15 to 2028-11-20
+    selection: Thai national skills competitions (DSD) / WorldSkills ASEAN
+  recurrence: cohort
+  attempts_limit: 1
+  prep_lead_time_months: 24
+  prerequisites:
+  - win or place at Thai national skills competition
+  - intensive trade training
+  urgency: time_critical
+  source_url: https://worldskills.org/get-involved/how-compete/
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Age rule and exception list quoted from worldskills.org how-compete page; Thailand listed
+    as a member on worldskills.org/members; next competition Aichi 2028 (15-20 Nov 2028) from worldskills.org/what/competitions.
+    Thai national selection procedure and dates (DSD) not confirmed from an official DSD page. WorldSkills rules
+    generally allow competing only once at a WorldSkills Competition; attempts_limit=1 is from general knowledge
+    and not confirmed on the fetched page.
+  tags:
+  - age-gated
+  - vocational
+  - biennial
+  - national-team
+- slug: afs-thailand-year-program
+  name: AFS Intercultural Programs Thailand - 1-Year Exchange (Year Program)
+  name_th: โครงการเยาวชนเอเอฟเอสเพื่อการศึกษาและแลกเปลี่ยนวัฒนธรรมนานาชาติ ระยะ 1 ปี
+  description: Year-long high-school exchange abroad with a host family or boarding school for Thai students in
+    M.3-M.5; each destination has a fixed birth-date window, so eligibility closes permanently as you age out.
+  category: education/exchange/secondary
+  country: TH
+  region: Global
+  issuer: AFS Intercultural Programs Thailand
+  official_url: https://afsthailand.org/programs/year-programs/
+  value_benefit: ~1 academic year at a foreign high school with host family/boarding; full-scholarship category
+    also offered
+  cost: Contribution about THB 390,000 to 1,350,000 depending on destination (round 66); limited full scholarships
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 14
+  max_age: 18
+  age_basis: calendar_year
+  gender: any
+  min_education: secondary
+  enrollment_required:
+  - secondary
+  education_text: Currently studying M.3, M.4 or M.5 (or equivalent) in academic year 2569.
+  conditions_text: 'Round 66 (travel 2027-2028): each destination specifies a birth-date window, e.g. Australia
+    (Tasmania) Q3: born 1 Apr 2552 - 1 Jan 2555 (2009-2012); USA boarding: 11 May 2552 - 11 Feb 2555; Argentina
+    Q3: 20 Aug 2552 - 31 Dec 2554. Round 3 (Q3 travel, Jul-Sep 2027): applications 16 Sep - 19 Nov 2026 (November
+    exam round) or until 22 Oct 2026 (October exam round).'
+  conditions:
+    birth_date_window: varies by destination, roughly 2009-2012 CE
+    grade: M.3-M.5
+  recurrence: cohort
+  open_date: '2026-09-16'
+  close_date: '2026-11-19'
+  window_months:
+  - 9
+  - 10
+  - 11
+  attempts_limit: 1
+  prep_lead_time_months: 3
+  prerequisites:
+  - Thai nationality
+  - enrolled M.3-M.5
+  - AFS written exam & interview
+  urgency: time_critical
+  source_url: https://afsthailand.org/programs/year-programs/
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: Grade requirement, birth-date windows per destination, contribution amounts and round-3 timeline
+    read on afsthailand.org today. Ages (14-18) are derived from the birth-date windows; the GPA minimum was not
+    found on the page this cycle (older cycles required 2.30).
+  tags:
+  - age-gated
+  - secondary-student
+  - exchange
+  - once-in-lifetime
+- slug: flex-global-usa-high-school-exchange-th
+  name: FLEX Global Program (U.S. high-school exchange) - Thailand
+  name_th: โครงการ FLEX Global
+  description: U.S. Department of State-funded academic year in a U.S. high school with a host family, implemented
+    by American Councils with AFS Thailand; Thai students in M.3-M.5 with a narrow birth-date window can apply.
+  category: education/exchange/secondary
+  country: US
+  region: Global
+  issuer: U.S. Department of State (ECA), American Councils for International Education, AFS Thailand
+  official_url: https://afsthailand.org/flex-global-program/
+  value_benefit: Fully funded academic year in the U.S. (host family, U.S. high school)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 14
+  max_age: 16
+  age_basis: calendar_year
+  gender: any
+  min_education: secondary
+  enrollment_required:
+  - secondary
+  education_text: Currently in 9th-11th grade (M.3-M.5) and must remain a student until the programme ends; must
+    not graduate secondary school before the 2027-28 programme.
+  conditions_text: '''Be a resident and citizen of Thailand; Born between 15 January 2010 and 15 August 2012'';
+    minimum 70% (B / 3.00) in all subjects in the past two years without failing grades; English ability; J-1 visa
+    eligible; not more than 90 days in the U.S. in the last five years.'
+  conditions:
+    born_between:
+    - '2010-01-15'
+    - '2012-08-15'
+    gpa_min: 3.0
+  recurrence: annual
+  open_date: '2026-10-15'
+  close_date: '2026-11-05'
+  window_months:
+  - 10
+  - 11
+  attempts_limit: 1
+  prep_lead_time_months: 1
+  prerequisites:
+  - GPA 3.00 / 70% in last two years
+  - English
+  - enrolled M.3-M.5
+  urgency: time_critical
+  source_url: https://afsthailand.org/flex-global-program/
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: 'Read on AFS Thailand FLEX Global page today: birth window, grades, GPA, application period
+    15 Oct - 5 Nov 2026 16:00, written exam 8 Nov 2026, selection camp 28-29 Nov 2026. ''Fully funded'' inferred
+    from it being a State Department ECA programme - funding details not quoted on the page. Ages 14-16 are today''s
+    ages for the birth window. Number of Thai places not stated.'
+  tags:
+  - age-gated
+  - secondary-student
+  - fully-funded
+  - exchange
+  - usa
+  - open-now
+- slug: rotary-youth-exchange-th
+  name: Rotary Youth Exchange (long-term) - Thailand districts
+  name_th: โครงการแลกเปลี่ยนเยาวชนโรตารี
+  description: One-academic-year high-school exchange organised by Rotary districts (e.g. District 3360, Northern
+    Thailand), with host families and the host Rotary club covering room, board and school fees.
+  category: education/exchange/secondary
+  country: INT
+  region: Global
+  issuer: Rotary International districts in Thailand (e.g. District 3360)
+  official_url: https://www.cmirotary.org/post/rotary-youth-exchange-opportunity-for-northern-thai-high-school-students
+  value_benefit: Room, board and school fees covered by host families/clubs for one academic year
+  cost: Family pays round-trip airfare, travel insurance, passport/visa and spending money
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 15
+  max_age: 18
+  age_basis: unspecified
+  gender: any
+  min_education: secondary
+  enrollment_required:
+  - secondary
+  conditions_text: '''high school student (ages 15-18)'' in Northern Thailand (District 3360); sponsored by a local
+    Rotary club; English interview.'
+  recurrence: annual
+  window_months:
+  - 9
+  - 10
+  attempts_limit: 1
+  prep_lead_time_months: 3
+  prerequisites:
+  - sponsoring Rotary club
+  - English interview
+  urgency: time_critical
+  source_url: https://www.cmirotary.org/post/rotary-youth-exchange-opportunity-for-northern-thai-high-school-students
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Age 15-18, one-year format and costs from a Rotary club (Chiang Mai International Rotary Club)
+    post; 2026-27 applications were due mid-October 2025. rotary.org could not be fetched (security checkpoint/429).
+    Other Thai districts (3330, 3340, 3350) may have different ages and dates; 2027-28 deadline not confirmed.
+  tags:
+  - age-gated
+  - secondary-student
+  - exchange
+- slug: th-armed-forces-academies-prep-school
+  name: Armed Forces Academies Preparatory School entrance
+  name_th: โรงเรียนเตรียมทหาร
+  description: Highly competitive entrance exam into the joint prep school that feeds the army, navy, air force
+    and police officer academies, with free education and a guaranteed officer career. Only open to young men aged
+    16-18 in the year of entry.
+  category: education/military-academy
+  country: TH
+  region: Thailand
+  issuer: Armed Forces Academies Preparatory School (Royal Thai Armed Forces / Royal Thai Police)
+  official_url: https://www.afaps.ac.th/
+  value_benefit: Free education and stipend, path to commissioned officer (army, navy, air force, police)
+  cost: Exam application fee
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 16
+  max_age: 18
+  age_basis: calendar_year
+  gender: male
+  min_education: secondary
+  enrollment_required:
+  - secondary
+  education_text: Completed Mathayom 4 (grade 10) or equivalent, or studying in it in the application year (per
+    service announcement).
+  conditions_text: 'Recent announcements: "อายุไม่ต่ำกว่า 16 ปี และไม่เกิน 18 ปี ในปีที่จะเข้ารับการศึกษา", age
+    counted under the Military Service Act (B.E. year basis). Thai male; health and physical standards apply.'
+  conditions:
+    exam: academic written exam + physical/medical tests
+  recurrence: annual
+  attempts_limit: 3
+  prep_lead_time_months: 18
+  prerequisites:
+  - M.4 completed or in progress
+  - tutoring for entrance exam
+  - physical fitness
+  urgency: time_critical
+  source_url: https://www.thansettakij.com/news/general-news/586584
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Age 16-18 in the year of entry and the M.4 requirement come from news reports quoting the
+    2024/2026 recruitment announcements (Thansettakij, PPTV); afaps.ac.th was not fetched, so the official_url is
+    not checked. The 2027 announcement and application dates are not confirmed. attempts_limit=3 is derived from
+    the 3-year age window, not an official rule.
+  tags:
+  - age-gated
+  - male
+  - military
+  - scholarship
+  - competitive-exam
+- slug: cn-csc-chinese-government-scholarship-masters
+  name: Chinese Government Scholarship (CSC) - Master's Degree
+  name_th: ทุนรัฐบาลจีน (CSC) ระดับปริญญาโท
+  description: Full Chinese government scholarship for master's study in China via the bilateral programme (dispatching
+    authority/Chinese embassy) or university programme. Age guideline 'generally under 35' (undergraduate under
+    25, doctoral under 40).
+  category: education/scholarship/postgraduate
+  country: CN
+  region: Asia-Pacific
+  issuer: China Scholarship Council (CSC), Ministry of Education of the PRC
+  official_url: https://www.campuschina.org/
+  value_benefit: Tuition waiver, on-campus accommodation, monthly stipend, comprehensive medical insurance; may
+    include 1 year Chinese-language preparatory study.
+  cost: None (application free; university fees may apply)
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  max_age: 34
+  age_basis: unspecified
+  gender: any
+  min_education: bachelor
+  education_text: Bachelor's degree or equivalent with excellent academic record.
+  conditions_text: 'Shanghai Municipal Government guide: master''s applicants ''hold a bachelor''s degree or equivalent...
+    and generally be under the age of 35''; bachelor''s ''generally be under the age of 25''; doctoral ''generally
+    be under the age of 40''; general scholar under 45; senior scholar under 50. HSK 4 for Chinese-taught programmes.'
+  conditions:
+    undergraduate_max_age: 24
+    doctoral_max_age: 39
+    general_scholar_max_age: 44
+    senior_scholar_max_age: 49
+    hsk_for_chinese_taught: 4
+  recurrence: annual
+  window_months:
+  - 1
+  - 2
+  - 3
+  - 4
+  prep_lead_time_months: 5
+  prerequisites:
+  - bachelor's degree
+  - two recommendation letters (professor/associate professor)
+  - study plan
+  - HSK 4 or English proficiency
+  - physical examination form
+  urgency: time_critical
+  source_url: https://english.shanghai.gov.cn/en-FAQs-StudyinShanghai/20260304/d488b4ae5965420cbd486fa5657f9942.html
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Age caps confirmed on an official Shanghai Municipal Government page (2026) and consistent
+    with 2026 university notices. campuschina.org could not be reached (DNS failure). Thai-specific dispatching
+    authority, quota and dates not confirmed; the typical January-April window comes from university notices. The
+    word 'generally' means caps are guidelines that universities enforce.
+  tags:
+  - age-gated
+  - fully-funded
+  - china
+  - graduate
+- slug: cn-schwarzman-scholars
+  name: Schwarzman Scholars (Tsinghua University)
+  description: 'Fully funded one-year master''s at Schwarzman College, Tsinghua University, Beijing, for future
+    global leaders. Strict window: at least 18 and not yet 29 on 1 August of the enrolment year.'
+  category: education/scholarship/postgraduate
+  country: CN
+  region: Global
+  issuer: Schwarzman Scholars / Tsinghua University
+  official_url: https://www.schwarzmanscholars.org/
+  value_benefit: Tuition and fees, room and board, travel to/from Beijing, in-country study tour, books, health
+    insurance and a personal stipend (benefits per university fellowship-office pages).
+  cost: None
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  min_age: 18
+  max_age: 28
+  age_basis: at_start
+  gender: any
+  min_education: bachelor
+  education_text: Undergraduate degree, or on track to complete it before 1 August of the enrolment year.
+  conditions_text: '''Candidates must be at least 18 but not yet 29 years of age as of August 1 of their Schwarzman
+    Scholars enrollment year (for the Class of 2028-2029, as of August 1, 2028).'' English: TOEFL 100 / IELTS 7
+    / Duolingo 130 unless 2+ years of English-medium study.'
+  conditions:
+    english: TOEFL iBT 100 / IELTS 7 / Duolingo 130 / Cambridge 185
+    class: 2028-2029
+  recurrence: annual
+  window_months:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  prep_lead_time_months: 6
+  prerequisites:
+  - bachelor's degree
+  - IELTS 7 or TOEFL 100
+  - leadership essay + statement of purpose
+  - 3 recommendation letters
+  - 1-minute video
+  urgency: time_critical
+  source_url: https://www.schwarzmanscholars.org/admissions/
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: Age, degree, English and Class of 2028-2029 timeline (applications April-September 2027, programme
+    starts August 2028) confirmed on schwarzmanscholars.org/admissions (fetched today). Benefits list from university
+    fellowship pages (Dartmouth, UW-Madison), not the official site; quota not confirmed.
+  tags:
+  - age-gated
+  - fully-funded
+  - china
+  - leadership
+  - graduate
+- slug: cn-yenching-academy-pku
+  name: Yenching Academy of Peking University - Yenching Scholars
+  description: Two-year interdisciplinary master's in China Studies at Peking University with a full fellowship.
+    No formal age cap, but no one over 29 has been admitted so far (average age 23). Applications for the September
+    2027 intake close 30 November 2026.
+  category: education/scholarship/postgraduate
+  country: CN
+  region: Global
+  issuer: Yenching Academy, Peking University
+  official_url: https://yenchingacademy.pku.edu.cn/
+  value_benefit: 'First-year Yenching Fellowship: tuition, accommodation, one round-trip travel stipend, basic medical
+    insurance, monthly stipend, research expenses; second-year fellowship on application.'
+  cost: None
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: bachelor
+  education_text: Minimum bachelor's degree in any field, awarded by August of the enrolment year.
+  conditions_text: 'FAQ: ''We do not have a strict age cut-off for applicants''; apart from Zhuoyue Scholarship
+    recipients no applicant over 29 has been admitted; average entering age 23. Mainland Chinese applicants follow
+    a separate process.'
+  conditions:
+    practical_age_ceiling: 29
+    programme_length_years: 2
+  recurrence: annual
+  close_date: '2026-11-30'
+  window_months:
+  - 9
+  - 10
+  - 11
+  prep_lead_time_months: 4
+  prerequisites:
+  - bachelor's degree (by August 2027)
+  - English proficiency
+  - personal statement
+  - recommendation letters
+  urgency: time_critical
+  source_url: https://yenchingacademy.pku.edu.cn/ADMISSIONS/Frequently_Asked_Questions.htm
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: Official homepage states applications are open for the September 2027 intake with a deadline
+    of 30 November 2026; FAQ confirms no strict age cut-off, the 29 practical ceiling and fellowship coverage. Open
+    date not shown. Partner-university internal deadlines may be earlier.
+  tags:
+  - soft-age-ceiling
+  - fully-funded
+  - china
+  - graduate
+  - open-now
+- slug: int-adb-japan-scholarship-program
+  name: ADB-Japan Scholarship Program (ADB-JSP)
+  description: Asian Development Bank scholarship funded by Japan for master's study in development-related fields
+    at participating institutions in Asia-Pacific. Applicants must be no older than 35 at application and have 2
+    years of work experience.
+  category: education/scholarship/postgraduate
+  country: INT
+  region: Asia-Pacific
+  issuer: Asian Development Bank (ADB) / Government of Japan
+  official_url: https://www.adb.org/work-with-us/careers/japan-scholarship-program
+  value_benefit: Full tuition, monthly subsistence and housing allowance, books allowance, medical insurance, travel;
+    up to 2 years.
+  cost: None
+  nationalities:
+  - '*'
+  thai_eligible: partial
+  max_age: 35
+  age_basis: at_application
+  gender: any
+  min_education: bachelor
+  education_text: Bachelor's degree or equivalent with superior academic record; not already enrolled in a graduate
+    programme.
+  profession: At least 2 years of full-time professional work experience after the degree.
+  conditions_text: '''not be more than 35 years old at the time of application'' (exceptions only with Government
+    of Japan endorsement). Must be a national of an ADB borrowing member that is Japanese-ODA eligible; must return
+    home after study; applicants living/working outside their home country are ineligible.'
+  conditions:
+    work_experience_years: 2
+    english: spoken and written proficiency
+    apply_via: participating institution, at least 6 months before start
+  recurrence: annual
+  prep_lead_time_months: 8
+  prerequisites:
+  - bachelor's degree
+  - 2 years full-time work experience
+  - admission to an ADB-JSP participating institution
+  - English proficiency
+  - income documents
+  urgency: time_critical
+  source_url: https://www.adb.org/work-with-us/careers/japan-scholarship-program/faq
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Age (<=35 at application), work experience and benefits confirmed on official ADB FAQ. Thailand's
+    presence on the eligible-country list is supported by a University of Tokyo application guide and AIT listings
+    but the ADB country list itself was not fetched; institution deadlines vary (no single window).
+  tags:
+  - age-gated
+  - fully-funded
+  - development
+  - graduate
+  - work-experience-required
+- slug: jp-mext-research-student-embassy-th
+  name: Japanese Government (MEXT) Scholarship - Research Students (Embassy Recommendation, Thailand)
+  name_th: ทุนรัฐบาลญี่ปุ่น (MEXT) ประเภทนักศึกษาวิจัย
+  description: Fully funded graduate study/research (master's, doctoral or non-degree research) at a Japanese university,
+    selected first by the Embassy of Japan in Thailand. The under-35 cap makes it a hard deadline for mid-career
+    Thais.
+  category: education/scholarship/postgraduate
+  country: JP
+  region: Asia-Pacific
+  issuer: Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan / Embassy of Japan in Thailand
+  official_url: https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/
+  value_benefit: Tuition waived, round-trip airfare, monthly stipend of about JPY 143,000-145,000 (JASSO table)
+    for the standard study period (typically 2+ years incl. possible research-student period).
+  cost: None (application free)
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  max_age: 34
+  age_basis: at_start
+  gender: any
+  min_education: bachelor
+  education_text: Bachelor's degree (or expected) meeting admission requirements of Japanese graduate schools.
+  conditions_text: 'JASSO: ''You must be under 35 years of age''. For the 2027 intake MEXT guidance (other embassies)
+    states applicants must in principle be born on or after April 2, 1992, i.e. under 35 on 1 April of the start
+    year.'
+  conditions:
+    birth_date_on_or_after_for_2027: '1992-04-02'
+    japanese_language: not required for English-taught fields; exam in English/Japanese
+  recurrence: annual
+  window_months:
+  - 4
+  - 5
+  - 6
+  prep_lead_time_months: 6
+  prerequisites:
+  - bachelor's degree
+  - research plan
+  - written exam (English/Japanese) and interview at the Embassy
+  - acceptance/contact with a Japanese supervisor recommended
+  urgency: time_critical
+  source_url: https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Age cap 'under 35' confirmed on JASSO Study in Japan official page (EN and TH). The 1992-04-02
+    birth-date cutoff for 2027 comes from MEXT 2027 guidance as reproduced by other Embassies of Japan (India, Philippines);
+    the Embassy of Japan in Thailand site (th.emb-japan.go.jp) returned HTTP 403 so the Thailand research-student
+    annex, dates and quota were not seen. Window months are inferred from the 2027 cycle (most embassies closed
+    late May-June 2026); the 2028 cycle has not been announced.
+  tags:
+  - age-gated
+  - fully-funded
+  - japan
+  - graduate
+  - embassy-recommendation
+- slug: kr-gks-graduate-th
+  name: Global Korea Scholarship (GKS) - Graduate Degrees
+  name_th: ทุนรัฐบาลเกาหลี GKS ระดับบัณฑิตศึกษา
+  description: Korean government scholarship for master's and doctoral degrees in Korea, via the Korean Embassy
+    in Thailand (embassy track) or directly through universities. Under-40 cap, and it can be received only once
+    in a lifetime.
+  category: education/scholarship/postgraduate
+  country: KR
+  region: Asia-Pacific
+  issuer: National Institute for International Education (NIIED), Ministry of Education, Korea
+  official_url: https://www.studyinkorea.go.kr/
+  value_benefit: Full tuition, round-trip airfare, settlement allowance, monthly allowance, 1 year Korean-language
+    training, research/printing support.
+  cost: None
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  max_age: 39
+  age_basis: at_start
+  gender: any
+  min_education: bachelor
+  education_text: Master's applicants need a bachelor's degree; doctoral applicants a master's (or expected by 31
+    Aug).
+  conditions_text: '2026 guideline: ''Must be under 40 years of age (born after September 1, 1986)''; current professors
+    in ODA countries under 45 (born after September 1, 1981). ''A person who has previously received a scholarship
+    from the Korean government is NOT eligible to apply.'''
+  conditions:
+    gpa: 80% / top 20% of class
+    age_reference_date: September 1 of entry year
+    professor_exception_max_age: 44
+    thailand_quota_2026:
+      embassy_track: 16
+      university_track: 17
+  recurrence: annual
+  window_months:
+  - 2
+  - 3
+  quota: '2026: Thailand 16 (embassy track) + 17 (university track); 800 embassy-track places worldwide'
+  attempts_limit: 1
+  prep_lead_time_months: 6
+  prerequisites:
+  - bachelor's (or master's) degree
+  - GPA top 20%/80%
+  - TOPIK or TOEFL/IELTS (optional bonus)
+  - 3 university choices (embassy track)
+  - recommendation letters
+  urgency: time_critical
+  source_url: https://www.esteri.it/wp-content/uploads/2026/02/2026-GKS-G-Application-Guidelines-English.pdf
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: 2026 GKS-G Application Guidelines (NIIED, English) retrieved from a copy hosted by the Italian
+    Ministry of Foreign Affairs; extracted text confirms age wording, previous-recipient exclusion, Thailand quotas
+    (16 embassy / 17 university) and embassy-track window 12-25 Feb 2026. Korean Embassy Kenya notice on mofa.go.kr
+    confirms same age wording. 2027 guideline not yet published; for 2027 entry the cutoff is expected to be born
+    after 1987-09-01 (inference).
+  tags:
+  - age-gated
+  - once-in-lifetime
+  - fully-funded
+  - korea
+  - graduate
+- slug: th-ocsc-government-scholarship-general-degree
+  name: Royal Thai Government Scholarship - General Public, Degree Level (OCSC)
+  name_th: ทุนรัฐบาล (ทุนบุคคลทั่วไประดับปริญญา) สำนักงาน ก.พ.
+  description: Annual OCSC competitive scholarships for Thai graduates to take master's/doctoral degrees (mostly
+    abroad) to fill posts in ministries and agencies, with a work-back obligation. Master's caps at 35 and doctoral
+    at 40, counted at the closing date.
+  category: education/scholarship/postgraduate
+  country: TH
+  region: Thailand
+  issuer: Office of the Civil Service Commission (OCSC, สำนักงาน ก.พ.)
+  official_url: https://www.ocsc.go.th/
+  value_benefit: Full funding for master's / master's-PhD / PhD abroad or in Thailand (tuition, living, travel),
+    with guaranteed government post on return.
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  max_age: 35
+  age_basis: at_deadline
+  gender: any
+  min_education: bachelor
+  education_text: 'Master''s / master''s-PhD: final-year undergraduate or bachelor''s holder, GPAX >= 2.75-3.00
+    (per unit); PhD: master''s holder, GPAX >= 3.50.'
+  conditions_text: 'Master''s and master''s-PhD: ''อายุไม่เกิน 35 ปี นับถึงวันปิดรับสมัคร'' (not over 35 at the
+    closing date); PhD: ''อายุไม่เกิน 40 ปี นับถึงวันปิดรับสมัคร''. Service obligation in the allocated agency.'
+  conditions:
+    phd_max_age: 40
+    gpa_min_masters: 2.75
+    gpa_min_phd: 3.5
+    service_obligation: work for allocated agency
+  recurrence: annual
+  window_months:
+  - 11
+  - 12
+  quota: Varies (e.g. 137 scholarships in the 2566 cycle)
+  prep_lead_time_months: 6
+  prerequisites:
+  - bachelor's degree (or final year)
+  - OCSC written exam (incl. English)
+  - interview/suitability assessment
+  urgency: time_critical
+  source_url: https://stscholar.nstda.or.th/wp-content/uploads/2025/12/ประกาศรับสมัคร-ก.พ.-ทุนทั่วไป-2569-ลงเว็บ.pdf
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: 'Age wording (35 master''s / 40 PhD at closing date) appears in an OCSC announcement hosted
+    on the NSTDA scholar site (search snippet), and in an OCSC 2566 summary (Bangkok Biz News: 137 places, 10 Nov-28
+    Dec 2022). The PDF''s Thai text could not be extracted (custom font encoding) and ocsc.go.th returns 403, so
+    the 2570 cycle dates, quota and per-unit GPA were not confirmed. Window months inferred from past cycles.'
+  tags:
+  - age-gated
+  - thai-government
+  - fully-funded
+  - bond
+  - graduate
+- slug: uk-chevening-th
+  name: Chevening Scholarships (Thailand)
+  name_th: ทุนชีฟนิ่ง
+  description: UK government's fully funded one-year master's scholarship. No upper age limit, but it requires 2,800
+    hours (2+ years) of post-degree work experience. A contrast case where preparation matters more than age.
+  category: education/scholarship/postgraduate
+  country: GB
+  region: Europe
+  issuer: UK Foreign, Commonwealth & Development Office (Chevening Secretariat) / British Embassy Bangkok
+  official_url: https://www.chevening.org/scholarship/thailand/
+  value_benefit: Fully funded one-year UK master's (official page says 'fully-funded'; typically tuition, living
+    allowance and travel).
+  cost: None
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: bachelor
+  education_text: 'Undergraduate degree enabling entry to a UK master''s, completed at least two years before the
+    application deadline (for 2027/28: by October 2024).'
+  profession: At least 2,800 hours of work experience after the undergraduate degree, over a minimum of two years
+    (paid, unpaid, voluntary or internships count).
+  conditions_text: '''There is no upper age limit.'' Must return to country of award for at least two years after
+    the award; apply to three eligible UK courses and hold an unconditional offer from one by the timeline deadline.'
+  conditions:
+    work_experience_hours: 2800
+    work_experience_years: 2
+    return_home_years: 2
+    course_choices: 3
+  recurrence: annual
+  window_months:
+  - 8
+  - 9
+  - 10
+  prep_lead_time_months: 12
+  prerequisites:
+  - bachelor's degree
+  - 2,800 hours post-degree work experience
+  - IELTS/UK university English requirement
+  - 3 UK course applications
+  - unconditional offer
+  - 4 essays
+  - 2 references
+  urgency: preparation_critical
+  source_url: https://www.chevening.org/scholarships/who-can-apply/eligibility/
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: No upper age limit (chevening.org/scholarships/who-can-apply), work experience (2,800 hours
+    / 2 years / degree by Oct 2024) and the return-home rule confirmed on official Chevening pages; Thailand country
+    page confirms Thailand participates and 2027-28 applications are closed. Window months from the 2027/28 cycle
+    (opened 4 Aug, closed 6 Oct 2026, per search results); 2028/29 dates not yet published.
+  tags:
+  - no-age-limit
+  - fully-funded
+  - uk
+  - graduate
+  - work-experience-required
+- slug: us-fulbright-thai-graduate-scholarship-tgs
+  name: Fulbright Thai Graduate Scholarship Program (TGS)
+  name_th: ทุนฟุลไบรท์ ระดับบัณฑิตศึกษา (TGS)
+  description: TUSEF/Fulbright grant for Thai graduates to pursue a master's or doctorate in the U.S. (all fields
+    except medicine and nursing). Thai citizens only; up to four grants a year.
+  category: education/scholarship/postgraduate
+  country: US
+  region: North America
+  issuer: Thailand-United States Educational Foundation (TUSEF / Fulbright Thailand)
+  official_url: https://www.fulbrightthai.org/grants-for-thais/thai-graduate-scholarship-program-tgs
+  value_benefit: Grant for graduate study in the U.S. for up to 2 years (coverage details per annual call).
+  cost: None
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: bachelor
+  education_text: Completed bachelor's or master's from an accredited institution at time of application; GPAX >=
+    3.00 for master's applicants.
+  conditions_text: Thai citizens in good health; dual citizens, U.S. green-card and immigrant-visa holders ineligible.
+    No age limit found in the 2025-2027 calls (a 2020 call said 'preferably from 30 to 50 years of age'). TOEFL
+    iBT 80 / IELTS 6.5 minimum for master's.
+  conditions:
+    gpa_min: 3.0
+    english: TOEFL iBT 80 / IELTS 6.5 (higher for doctoral)
+    excluded_fields:
+    - medicine
+    - nursing
+  recurrence: annual
+  window_months:
+  - 1
+  - 2
+  - 3
+  - 4
+  quota: Up to 4 grants per year
+  prep_lead_time_months: 8
+  prerequisites:
+  - bachelor's degree, GPAX 3.00+
+  - TOEFL iBT 80 / IELTS 6.5
+  - study objectives essay
+  - references
+  - interview
+  urgency: preparation_critical
+  source_url: https://www.fulbrightthai.org/thai-active-scholarship-program/call-for-applications-2027-thai-graduate-scholarship-tgs-program
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: 2027 call (deadline 30 April 2026, up to 4 grants, no medicine/nursing) and January-April
+    window seen in fulbrightthai.org search results; direct WebFetch of fulbrightthai.org pages returned 404 (JS-rendered
+    site). GPA/English thresholds from TUSEF Nov-2025 brochure as summarised in search results. No age cap confirmed
+    either way. 2028 call not yet published.
+  tags:
+  - thai-only
+  - fully-funded
+  - usa
+  - graduate
+- slug: jp-mext-undergraduate-embassy-th
+  name: Japanese Government (MEXT) Scholarship - Undergraduate Students (Embassy Recommendation, Thailand)
+  name_th: ทุนรัฐบาลญี่ปุ่น (MEXT) ประเภทนักศึกษาปริญญาตรี
+  description: Fully funded bachelor's degree in Japan including one year of Japanese-language preparation, for
+    upper-secondary graduates. Under-25 cap with fixed birth-date cut-offs each year.
+  category: education/scholarship/undergraduate
+  country: JP
+  region: Asia-Pacific
+  issuer: MEXT Japan / Embassy of Japan in Thailand
+  official_url: https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/
+  value_benefit: Tuition waived, airfare, monthly stipend (JASSO table lists about JPY 117,000 for undergraduate-level
+    categories) for 1 year Japanese prep + 4 years (6 for medicine etc.).
+  cost: None
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  max_age: 24
+  age_basis: at_start
+  gender: any
+  min_education: secondary
+  education_text: Completed (or expected to complete) 12 years of schooling / upper secondary.
+  conditions_text: 'JASSO: ''You must be under 25 years of age''. MEXT 2027 guidance (other embassies): born on
+    or after April 2, 2002. The Thai 2026 undergraduate annex used ''born on or after April 2, 2001'' (per search
+    snippet), i.e. the cut-off moves one year each cycle.'
+  conditions:
+    birth_date_on_or_after_for_2027: '2002-04-02'
+    thai_gpa_min_other_categories: 3.0
+  recurrence: annual
+  window_months:
+  - 4
+  - 5
+  - 6
+  prep_lead_time_months: 6
+  prerequisites:
+  - high school diploma (or final year)
+  - 'written exam: Japanese, English, Mathematics (+ sciences for science track)'
+  - interview
+  urgency: time_critical
+  source_url: https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Under-25 cap confirmed on JASSO official page. Thai-specific 2027 undergraduate annex not
+    retrieved (Embassy site 403); birth-date cutoff taken from MEXT 2027 guidance on other embassy/government pages.
+    Stipend mapping in JASSO table was ambiguous. Next (2028) cycle dates not yet published; months inferred from
+    2027 cycle.
+  tags:
+  - age-gated
+  - fully-funded
+  - japan
+  - undergraduate
+  - school-leavers
+- slug: kr-gks-undergraduate-th
+  name: Global Korea Scholarship (GKS) - Undergraduate Degrees
+  name_th: ทุนรัฐบาลเกาหลี GKS ระดับปริญญาตรี
+  description: Korean government scholarship for a bachelor's or associate degree in Korea including a Korean-language
+    year. Under-25 cap; the 2027 university track is still open at some universities until November 2026.
+  category: education/scholarship/undergraduate
+  country: KR
+  region: Asia-Pacific
+  issuer: NIIED, Ministry of Education, Korea
+  official_url: https://www.studyinkorea.go.kr/
+  value_benefit: Full tuition, airfare, settlement allowance, monthly allowance, 1 year Korean-language course,
+    then 4-6 years degree.
+  cost: None
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  max_age: 24
+  age_basis: at_start
+  gender: any
+  min_education: secondary
+  education_text: High school graduate or expected graduate; holders of a bachelor's degree are ineligible.
+  conditions_text: 'GKS-U 2027 (per Korea JoongAng Daily, 16 Sep 2026): applicants must be under 25, i.e. born after
+    March 1, 2002. Embassy track: 15-30 Sep 2026; university track open through November 2026 (deadlines vary by
+    university). Previous Korean-government scholarship recipients are ineligible.'
+  conditions:
+    born_after_for_2027: '2002-03-01'
+    gpa: 80% / top 20%
+    tracks:
+    - embassy
+    - university
+  recurrence: annual
+  window_months:
+  - 9
+  - 10
+  - 11
+  quota: '2027: embassy track 156 (74 countries), university track 130'
+  attempts_limit: 1
+  prep_lead_time_months: 4
+  prerequisites:
+  - high school diploma (or expected)
+  - GPA top 20%
+  - recommendation letter
+  - personal statement and study plan
+  urgency: time_critical
+  source_url: https://www.koreajoongangdaily.com/korea/gksu-2027-what-international-students-need-to-know-before-applying/12878569
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Embassy-track dates 15-30 Sep 2026 confirmed on official Korean Embassy (Kenya) notice at
+    mofa.go.kr. Age (born after 2002-03-01), university-track-through-November and quotas taken from Korea JoongAng
+    Daily, as the 2027 GKS-U guideline PDF on studyinkorea.go.kr was not retrieved. Thailand's inclusion in the
+    2027 embassy-track country list was not confirmed (Thailand was eligible for GKS-G 2026).
+  tags:
+  - age-gated
+  - fully-funded
+  - korea
+  - undergraduate
+  - school-leavers
+  - open-now-university-track
+- slug: th-ocsc-kings-scholarship
+  name: King's Scholarship (OCSC)
+  name_th: ทุนเล่าเรียนหลวง
+  description: Thailand's most prestigious government scholarship for final-year upper-secondary students to take
+    a bachelor's (and onward) abroad, with an obligation to work in Thailand afterwards. 9 scholarships for 2027
+    (B.E. 2570); applications are open now until 30 October 2026.
+  category: education/scholarship/undergraduate
+  country: TH
+  region: Thailand
+  issuer: Office of the Civil Service Commission (OCSC, สำนักงาน ก.พ.)
+  official_url: https://www.ocsc.go.th/scholarships/highschool-scholarships/
+  value_benefit: 'Full funding abroad: return airfare, pre-departure allowance, monthly living allowance, tuition,
+    books/equipment and computer allowance.'
+  cost: Exam fee THB 100 per scholarship unit + THB 30 bank fee (non-refundable)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  max_age: 20
+  age_basis: at_deadline
+  gender: any
+  min_education: none
+  enrollment_required:
+  - secondary
+  education_text: Currently in the final year of upper secondary (M.6 or MOE-recognised foreign equivalent) in academic
+    year 2569; GPAX >= 3.50 at application and at graduation; no failed upper-secondary subjects.
+  conditions_text: Thai nationality and 'อายุไม่เกิน 20 ปี ณ วันที่ 30 ตุลาคม 2569' (not over 20 years old as of
+    30 October 2026). Choose one scholarship unit only. Must return to work in Thailand for a period equal to the
+    scholarship period or repay.
+  conditions:
+    gpa_min: 3.5
+    units:
+      '700120101': 5
+      '700120102': 2
+      '700120103': 2
+    written_exam: 19-22 Dec 2026
+    results: by 26 Feb 2027
+    service_obligation: equal to scholarship duration
+  recurrence: annual
+  open_date: '2026-10-05'
+  close_date: '2026-10-30'
+  window_months:
+  - 10
+  quota: 9 scholarships (2570 cycle)
+  attempts_limit: 1
+  prep_lead_time_months: 12
+  prerequisites:
+  - final-year M.6 student
+  - GPAX 3.50+
+  - 'written exam: English, Thai, Social Studies + 2 unit-specific subjects'
+  - suitability assessment/interview
+  urgency: time_critical
+  source_url: https://www.ocsc.go.th/?post_type=scholarship&p=122637&
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Details (age <=20 at 30 Oct 2026, final-year secondary, GPAX 3.50, 9 places, 5-30 Oct 2026
+    application, fees, timeline) from Eduzones article dated 7 Oct 2026 summarising the OCSC announcement of 2 Oct
+    2026; the OCSC page linked from that article (used as source_url) returned HTTP 403 to automated fetch so it
+    was not read directly. attempts_limit=1 because only students in their final secondary year in that academic
+    year may apply.
+  tags:
+  - age-gated
+  - thai-government
+  - fully-funded
+  - bond
+  - school-leavers
+  - open-now
+  - once-in-lifetime
+- slug: jp-mext-kosen-embassy-th
+  name: Japanese Government (MEXT) Scholarship - College of Technology (KOSEN) Students (Thailand)
+  name_th: ทุนรัฐบาลญี่ปุ่น (MEXT) ประเภทนักศึกษาวิทยาลัยเทคนิค (KOSEN)
+  description: Fully funded study at a Japanese College of Technology (KOSEN, entry into 3rd year) after Japanese-language
+    prep; a practical engineering route for Thai school leavers under 25.
+  category: education/scholarship/vocational
+  country: JP
+  region: Asia-Pacific
+  issuer: MEXT Japan / Embassy of Japan in Thailand (applications via Bureau of International Cooperation, Thai
+    Ministry of Education)
+  official_url: https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/
+  value_benefit: Tuition waived, airfare, monthly stipend (about JPY 117,000 per JASSO table), Japanese-language
+    preparatory course.
+  cost: None (postage only)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  max_age: 24
+  age_basis: at_start
+  gender: any
+  min_education: secondary
+  education_text: Upper secondary graduate (or expected) with cumulative GPA >= 3.00/4.00.
+  conditions_text: 'Thai annex 2027: ''(1) Applicants must have Thai nationality and have been born on or after
+    April 2, 2002. (2) Applicants must have attained a cumulative GPA of at least 3.00 on a 4.00 GPA scale at an
+    upper secondary school.'' JASSO: ''You must be under 25 years of age''.'
+  conditions:
+    birth_date_on_or_after_for_2027: '2002-04-02'
+    gpa_min: 3.0
+    exam_subjects:
+    - Japanese
+    - English
+    - Mathematics
+    exam_venues:
+    - Bangkok
+    - Chiang Mai
+    - Khon Kaen
+    - Songkhla
+  recurrence: annual
+  window_months:
+  - 4
+  - 5
+  - 6
+  prep_lead_time_months: 4
+  prerequisites:
+  - upper secondary GPA 3.00+
+  - written exam (Japanese, English, Mathematics)
+  - interview at Embassy of Japan
+  urgency: time_critical
+  source_url: https://bic.moe.go.th/wp-content/uploads/2026/04/C2027-ANNEX.pdf
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: 'Fetched the official 2027 Thailand annex (authored by Embassy of Japan in Thailand, hosted
+    on bic.moe.go.th): Thai nationality, born on/after 2002-04-02, GPA 3.00; documents posted to BIC by 2 June 2026;
+    written exam 28 June 2026; interview 20 July 2026. The 2027 cycle is closed; the 2028 cycle (expected similar
+    April-June window, cutoff presumably born on/after 2003-04-02) is not yet published, so open/close dates are
+    null.'
+  tags:
+  - age-gated
+  - fully-funded
+  - japan
+  - vocational
+  - school-leavers
+  - thai-only-annex
+- slug: jp-mext-specialized-training-embassy-th
+  name: Japanese Government (MEXT) Scholarship - Specialized Training College Students (Thailand)
+  name_th: ทุนรัฐบาลญี่ปุ่น (MEXT) ประเภทนักศึกษาฝึกอบรมวิชาชีพ (Senshu Gakko)
+  description: Fully funded vocational study at a Japanese specialized training college (senshu gakko) after a year
+    of Japanese-language prep, for Thai school leavers under 25.
+  category: education/scholarship/vocational
+  country: JP
+  region: Asia-Pacific
+  issuer: MEXT Japan / Embassy of Japan in Thailand (applications via Bureau of International Cooperation, Thai
+    Ministry of Education)
+  official_url: https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/
+  value_benefit: Tuition waived, airfare, monthly stipend (about JPY 117,000 per JASSO table), Japanese-language
+    preparatory course.
+  cost: None (postage only)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  max_age: 24
+  age_basis: at_start
+  gender: any
+  min_education: secondary
+  education_text: Upper secondary graduate (or expected) with cumulative GPA >= 3.00/4.00.
+  conditions_text: 'Thai annex 2027: ''(1) Applicants must have Thai nationality and have been born on or after
+    April 2, 2002. (2) Applicants must have attained a cumulative GPA of at least 3.00 on a 4.00 GPA scale at an
+    upper secondary school.'' JASSO: ''You must be under 25 years of age''.'
+  conditions:
+    birth_date_on_or_after_for_2027: '2002-04-02'
+    gpa_min: 3.0
+    exam_subjects:
+    - Japanese
+    - English
+    - Mathematics
+    exam_venues:
+    - Bangkok
+    - Chiang Mai
+    - Khon Kaen
+    - Songkhla
+  recurrence: annual
+  window_months:
+  - 4
+  - 5
+  - 6
+  prep_lead_time_months: 4
+  prerequisites:
+  - upper secondary GPA 3.00+
+  - written exam (Japanese, English, Mathematics)
+  - interview at Embassy of Japan
+  urgency: time_critical
+  source_url: https://bic.moe.go.th/wp-content/uploads/2026/04/S2027-ANNEX.pdf
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: 'Fetched the official 2027 Thailand annex (authored by Embassy of Japan in Thailand, hosted
+    on bic.moe.go.th): Thai nationality, born on/after 2002-04-02, GPA 3.00; documents posted to BIC by 2 June 2026;
+    written exam 28 June 2026; interview 20 July 2026. The 2027 cycle is closed; the 2028 cycle (expected similar
+    April-June window, cutoff presumably born on/after 2003-04-02) is not yet published, so open/close dates are
+    null.'
+  tags:
+  - age-gated
+  - fully-funded
+  - japan
+  - vocational
+  - school-leavers
+  - thai-only-annex
+- slug: th-national-savings-fund-nsf
+  name: National Savings Fund (NSF / Kor Or Chor)
+  name_th: กองทุนการออมแห่งชาติ (กอช.)
+  description: 'Government pension savings scheme for informal workers, freelancers, farmers and students: the state
+    tops up your savings and pays a lifelong pension from 60. You must join by age 60, and starting young means
+    more years of matching.'
+  category: finance/savings
+  country: TH
+  region: Thailand
+  issuer: National Savings Fund (กอช.), Ministry of Finance
+  official_url: https://www.nsf.or.th/
+  value_benefit: Government matching contribution on your savings (higher % for older members) and a lifetime pension
+    after 60
+  cost: Save from 50 baht per deposit, up to 30,000 baht per year
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 15
+  max_age: 60
+  age_basis: at_application
+  gender: any
+  min_education: none
+  conditions_text: Thai nationals aged 15-60. Not eligible if a GPF (กบข.) member, Social Security Section 33, 39
+    or Section 40 options 2-3 insured, or in a provident fund; Section 40 option 1 members may join.
+  conditions:
+    savings_min_per_deposit_thb: 50
+    savings_max_per_year_thb: 30000
+    reported_match: '15-30: 50% up to 600/yr; >30-50: 80% up to 960/yr; >50-60: 100% up to 1,200/yr'
+  recurrence: rolling
+  prep_lead_time_months: 0
+  prerequisites:
+  - Thai ID card
+  urgency: time_critical
+  source_url: https://www.nsf.or.th/th/content/%E0%B8%84%E0%B8%B3%E0%B8%96%E0%B8%B2%E0%B8%A1%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%9A%E0%B8%9A%E0%B9%88%E0%B8%AD%E0%B8%A2-faq
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: 'Fetched nsf.or.th FAQ: confirms exclusions (GPF, SS 33/39/40 options 2-3, provident fund;
+    SS40 option 1 allowed), 50-30,000 baht limits, pension at 60. The 15-60 joining age and the age-banded match
+    rates come from news and gov''t summaries in search results, not a fetched NSF page. NSF homepage stats show
+    members in the 15-30 band, which fits a 15 minimum.'
+  tags:
+  - age-gated
+  - pension
+  - informal-worker
+  - government-matching
+- slug: th-military-registration-sd9
+  name: Military reserve registration (Sor Dor 9)
+  name_th: การลงบัญชีทหารกองเกิน (ใบสำคัญ สด.9)
+  description: Legal duty for every Thai man to register as a reservist in the calendar year he turns 17 (enters
+    his 18th year). The Sor Dor 9 certificate is needed for later deferments, ROTC and many documents, and late
+    registration is an offence.
+  category: government/military
+  country: TH
+  region: Thailand
+  issuer: Territorial Defence Command, Army (หน่วยบัญชาการรักษาดินแดน) via district offices
+  official_url: https://www.tdc.mi.th/
+  value_benefit: Legal compliance; Sor Dor 9 certificate required for conscription deferment and other services
+  cost: Free
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 17
+  max_age: 17
+  age_basis: calendar_year
+  gender: male
+  min_education: none
+  conditions_text: '"ชายที่มีสัญชาติเป็นไทย เมื่ออายุย่างเข้า 18 ปี ในปี พ.ศ. ใด ต้องไปแสดงตนเพื่อลงบัญชีเป็นทหารกองเกิน
+    ที่อำเภอท้องที่ที่เป็นภูมิลำเนาทหารของตนภายในปี พ.ศ. นั้น" (i.e. the B.E. year in which you turn 17). Those
+    who missed it and are under 46 must register in person; failure is an offence under Military Service Act B.E.
+    2497 s.44 (up to 3 months'' jail and/or 300 baht fine). Called for conscription selection at 21.'
+  conditions:
+    registration_year: birth B.E. year + 17
+    born_2552_registers_in: 2569
+    late_registration_until_age: 45
+  recurrence: annual
+  window_months:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  attempts_limit: 1
+  prep_lead_time_months: 0
+  prerequisites:
+  - ID card
+  - house registration
+  - birth certificate
+  urgency: time_critical
+  source_url: https://www.tdc.mi.th/pdf/tdcservice/service_sd_001.pdf
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Rule wording comes from the official Territorial Defence Command PDF (tdc.mi.th) as shown
+    in search results; the PDF itself was not fetched. Men born B.E. 2552 register during B.E. 2569 (2026). This
+    is an obligation, listed so users don't miss the year.
+  tags:
+  - mandatory
+  - male
+  - age-17
+  - once-in-lifetime
+  - military
+- slug: th-rotc-nor-sor-tor
+  name: Reserve Officer Training Corps (Territorial Defence Students)
+  name_th: นักศึกษาวิชาทหาร (นศท. / รด.)
+  description: Voluntary military training taken alongside school or university. Finishing year 3 exempts men from
+    the conscription lottery, but you must enrol in year 1 by age 22 while in school.
+  category: government/military
+  country: TH
+  region: Thailand
+  issuer: Territorial Defence Command (หน่วยบัญชาการรักษาดินแดน) via schools/universities
+  official_url: https://www.tdc.mi.th/
+  value_benefit: Completing year 3 exempts from conscription selection; years 4-5 can lead to reserve officer rank
+  cost: Small fees and uniform costs
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 15
+  max_age: 22
+  age_basis: calendar_year
+  gender: any
+  min_education: secondary
+  enrollment_required:
+  - secondary
+  - vocational
+  - bachelor
+  education_text: Must have completed lower secondary (ม.3) or equivalent with GPA of at least 1.0 and be enrolled
+    at an institution with an ROTC unit.
+  conditions_text: 'SWU 2026 announcement: Thai male or female aged "ไม่ต่ำกว่า 15 ปีบริบูรณ์ขึ้นไปและไม่เกิน 22
+    ปีบริบูรณ์" counted under the Military Service Act; minors need parental consent; males 21+ must not be under
+    conscription call-up or deferment conflicts; must pass physical fitness test.'
+  conditions:
+    min_gpa_lower_secondary: 1.0
+    years_for_conscription_exemption: 3
+  recurrence: annual
+  window_months:
+  - 5
+  - 6
+  - 7
+  - 8
+  attempts_limit: 1
+  prep_lead_time_months: 2
+  prerequisites:
+  - Sor Dor 9 (males)
+  - completed ม.3
+  - physical fitness test
+  - parental consent if minor
+  urgency: time_critical
+  source_url: https://studentaffairs.op.swu.ac.th/Portals/25/งานสวัสดิการนิสิต/นักศึกษาวิชาทหาร/ปีการศึกษา 2569/ประกาศการรับสมัคร
+    นศท. 2569.pdf
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: 'Age 15-22, education and nationality rules from a Srinakharinwirot University 2026 ROTC recruitment
+    announcement (an institutional copy of TDC rules) and Mahidol documents, seen in search results, not fetched.
+    Application windows vary by institution (SWU: July-August). The conscription-exemption benefit is general knowledge,
+    not confirmed on a fetched page.'
+  tags:
+  - age-gated
+  - student
+  - military
+  - conscription-exemption
+- slug: th-social-security-section-39
+  name: Social Security Section 39 (voluntary continuation)
+  name_th: ผู้ประกันตนมาตรา 39
+  description: Lets former employees keep Social Security cover (medical, maternity, disability, death, child, old-age)
+    after leaving a job, for 432 baht/month. You must apply within 6 months of leaving or the right is lost.
+  category: government/social-security
+  country: TH
+  region: Thailand
+  issuer: Social Security Office (สำนักงานประกันสังคม)
+  official_url: https://www.sso.go.th/
+  value_benefit: Continuation of 6 benefit types incl. old-age pension accrual
+  cost: 432 baht per month (9% of fixed 4,800 baht base)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: none
+  profession: Former Section 33 employee
+  conditions_text: '"เคยเป็นผู้ประกันตนตามมาตรา 33 นำส่งเงินสมทบมาแล้วไม่น้อยกว่า 12 เดือนและออกจากงานไม่เกิน 6
+    เดือน นับแต่วันที่ลาออกจากงาน"; must file form สปส. 1-20 in person within 6 months; not a disability-benefit
+    recipient.'
+  conditions:
+    min_s33_contribution_months: 12
+    apply_within_months_of_leaving_job: 6
+  recurrence: rolling
+  prep_lead_time_months: 0
+  prerequisites:
+  - 12+ months Section 33 contributions
+  - form สปส. 1-20
+  - ID card
+  urgency: time_critical
+  source_url: https://www.sso.go.th/wpr/main/privilege/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A1_detail_detail_1_125_0/32_32
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: 'Qualifications and 6-month deadline quoted from sso.go.th. Note: the SSO application-form
+    PDF counts the 6 months from the end of employment status rather than the resignation date; apply as early as
+    possible. Coverage ends if 3 consecutive months are missed or fewer than 9 of 12 months are paid.'
+  tags:
+  - deadline-gated
+  - 6-month-window
+  - job-change
+  - social-security
+- slug: th-social-security-section-40
+  name: Social Security Section 40 (self-employed / informal workers)
+  name_th: ผู้ประกันตนมาตรา 40
+  description: Low-cost voluntary social insurance for freelancers and informal workers, with government co-payment.
+    Only open from 15 to 65, so self-employed people should join before the cap.
+  category: government/social-security
+  country: TH
+  region: Thailand
+  issuer: Social Security Office (สำนักงานประกันสังคม)
+  official_url: https://www.sso.go.th/
+  value_benefit: 'Option 1 (70 baht/mo): injury/sickness, disability, death; Option 2 (100): + old-age lump sum;
+    Option 3 (300): + child allowance. Government co-pays part of contributions.'
+  cost: 70, 100 or 300 baht per month
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 15
+  max_age: 65
+  age_basis: at_application
+  gender: any
+  min_education: none
+  conditions_text: '"ผู้สมัครต้องมีอายุไม่ต่ำกว่า 15 ปีบริบูรณ์ และไม่เกิน 65 ปีบริบูรณ์"; Thai nationals (or some
+    stateless ID holders); not Section 33 or 39 insured; not in a civil-service/state pension fund (retired civil
+    servants may apply).'
+  conditions:
+    options_thb_per_month:
+    - 70
+    - 100
+    - 300
+  recurrence: rolling
+  prep_lead_time_months: 0
+  prerequisites:
+  - Thai ID card
+  urgency: time_critical
+  source_url: https://www.sso.go.th/wpr/main/service/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A1_detail_detail_1_125_698/247_247
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: Age 15-65, exclusions and contribution options quoted from the official SSO Section 40 registration
+    page.
+  tags:
+  - age-gated
+  - freelancer
+  - informal-worker
+  - social-security
+- slug: th-elderly-living-allowance
+  name: Elderly Living Allowance
+  name_th: เบี้ยยังชีพผู้สูงอายุ
+  description: Monthly state allowance for Thai citizens from age 60. Payment starts only from the October after
+    you register, with no back pay, so you have to register in the fiscal year before you turn 60.
+  category: government/welfare
+  country: TH
+  region: Thailand
+  issuer: Department of Older Persons / local governments (อบต., เทศบาล, district offices)
+  official_url: https://www.dop.go.th/
+  value_benefit: 600 baht/month (60-69), 700 (70-79), 800 (80-89), 1,000 (90+)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 59
+  age_basis: calendar_year
+  gender: any
+  min_education: none
+  conditions_text: Thai nationals who will be 60 by the fiscal year of payment, registered in the local house register,
+    and not receiving other state welfare such as a civil-service pension. People turning 60 in FY2571 (born 2 Sep
+    2510 to 1 Sep 2511) register in advance; payment begins the following October with no back pay. Already-registered
+    people only re-register if they move.
+  conditions:
+    registration_windows_pattern: Oct-Nov and Jan-Sep of the fiscal year before payment
+    no_back_pay: true
+  recurrence: annual
+  window_months:
+  - 10
+  - 11
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  prep_lead_time_months: 0
+  prerequisites:
+  - Thai ID card
+  - house registration
+  - bank book (optional)
+  urgency: time_critical
+  source_url: https://www.dop.go.th/en/topic/view=956
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: 'dop.go.th Q&A (dated 2021) confirms Thai nationality, pension exclusion, amounts by age band
+    and that you must be 59 to register. It names a 1-30 Nov window, which is older. The current Oct-Nov + Jan-Sep
+    windows (FY2570: Oct-Nov 2025 and Jan-Sep 2026) come from bantaksin.dop.go.th and news. The FY2571 birth range
+    (2 Sep 2510 - 1 Sep 2511) is from news reports, not confirmed on an official page.'
+  tags:
+  - age-60
+  - register-in-advance
+  - no-back-pay
+  - welfare
+- slug: th-red-cross-blood-donation
+  name: Thai Red Cross blood donation
+  name_th: การบริจาคโลหิต สภากาชาดไทย
+  description: 'Blood donation at the Thai Red Cross National Blood Centre. Strictly age-gated: from 17 with parental
+    consent, and a first donation must happen by 60, or you can never become a donor.'
+  category: health/blood-donation
+  country: TH
+  region: Thailand
+  issuer: National Blood Centre, Thai Red Cross Society
+  official_url: https://thaibloodcentre.redcross.or.th/
+  value_benefit: Save lives; regular donors get health screening and recognition pins/privileges
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  min_age: 17
+  max_age: 70
+  age_basis: at_application
+  gender: any
+  min_education: none
+  conditions_text: '"ผู้บริจาคโลหิตต้องมีอายุ 17- 70 ปี (อายุ 17 ปีบริบูรณ์ ต้องมีเอกสารยินยอมจากผู้ปกครอง)"; "บริจาคโลหิตครั้งแรก
+    อายุไม่เกิน 60 ปี". Ages 60-65: regular donors, at least once a year, every 3 months. Ages 65-70: every 6 months,
+    not at mobile units. Weight 45 kg+.'
+  conditions:
+    first_time_max_age: 60
+    min_weight_kg: 45
+    parental_consent_at_17: true
+  recurrence: rolling
+  prep_lead_time_months: 0
+  prerequisites:
+  - ID card
+  - weight 45 kg+
+  - 5+ hours sleep
+  urgency: time_critical
+  source_url: https://thaibloodcentre.redcross.or.th/donor-eligibility/
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: All age rules quoted from the official Thai Red Cross National Blood Centre donor-eligibility
+    page. Some older pages still show 17-60 or a first-time cap of 55; the current official page says first-time
+    donors may be up to 60.
+  tags:
+  - age-gated
+  - first-time-cap-60
+  - health
+  - volunteering
+- slug: th-cpa-licence-tfac
+  name: Certified Public Accountant (CPA) Thailand
+  name_th: ผู้สอบบัญชีรับอนุญาต
+  description: Thailand's statutory auditor licence, granted by the Federation of Accounting Professions (TFAC).
+    It needs an accounting degree, at least 3 years of supervised audit training and a multi-subject exam, so preparation
+    takes years.
+  category: license/accounting
+  country: TH
+  region: Thailand
+  issuer: Federation of Accounting Professions (TFAC / สภาวิชาชีพบัญชีฯ)
+  official_url: https://www.tfac.or.th/
+  value_benefit: Legal right to sign audit reports in Thailand; strong premium career credential.
+  cost: TFAC membership and per-subject exam fees (amounts not verified)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: bachelor
+  education_text: Bachelor's degree in accounting from a TFAC-recognised programme (secondary sources).
+  profession: 'Audit training under an approved CPA: at least 3 years and at least 3,000 hours (secondary sources)'
+  conditions_text: No upper age limit. Must be a TFAC member; pass all CPA subjects (secondary sources say 6); finish
+    the training. An old minimum age of 20 for the ก.บช. regime is unconfirmed under current rules.
+  conditions:
+    training_years_min: 3
+    training_hours_min: 3000
+    exam_subjects: 6
+  recurrence: cohort
+  prep_lead_time_months: 36
+  prerequisites:
+  - accounting bachelor's degree
+  - TFAC membership
+  - 3 years / 3,000 hours audit training
+  - pass CPA exams
+  urgency: preparation_critical
+  source_url: https://www.tfac.or.th/
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: The TFAC home page confirms that the CPA exam is run in rounds (a notice dated 9 Oct 2026
+    covers round 64, 3/2569) and has links to the training and exam systems. The training length, hours and number
+    of subjects come from secondary sources (Jobsdb, Trueplookpanya); TFAC's own rule pages were not reached.
+  tags:
+  - license
+  - long-prep
+  - no-age-cap
+- slug: caat-commercial-pilot-licence
+  name: Commercial Pilot Licence (Aeroplane) - CAAT
+  name_th: ใบอนุญาตนักบินพาณิชย์ตรี (กพท.)
+  description: Thailand's commercial pilot licence, issued by the Civil Aviation Authority of Thailand under ICAO
+    Annex 1. Self-funded students can take it at approved schools such as the Civil Aviation Training Center (CATC)
+    CPL/IR integrated course.
+  category: license/aviation
+  country: TH
+  region: Thailand
+  issuer: Civil Aviation Authority of Thailand (CAAT)
+  official_url: https://www.caat.or.th/?p=171684
+  value_benefit: Legal right to fly as a paid pilot; prerequisite for airline first-officer jobs.
+  cost: Training at an approved school (e.g. CATC CPL/IR integrated) is self-funded and costly; CAAT licence fees
+    apply. Exact amounts not verified.
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  min_age: 18
+  age_basis: at_application
+  gender: any
+  min_education: secondary
+  education_text: No degree required for the licence itself; the training school sets its own entry rules.
+  conditions_text: ICAO Annex 1 sets a minimum age of 18 for a CPL; CAAT's eAIP GEN 1.7 lists no Thai difference
+    on this point. Requires a Class 1 medical certificate, the CAAT theory exams, and the flight experience in CAAT
+    Regulation No. 24 and TCAR PEL Part FCL.
+  conditions:
+    medical_class: 1
+  recurrence: rolling
+  prep_lead_time_months: 18
+  prerequisites:
+  - Class 1 medical
+  - CAAT theory exams
+  - approved flight training
+  urgency: preparation_critical
+  source_url: https://aip.caat.or.th/2026-07-09-AIRAC/html/eAIP/VT-GEN-1.7-en-GB.html
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Class 1 medical for CPL confirmed in CAAT eAIP GEN 1.7, which lists no Annex 1 difference
+    on CPL age. The minimum age of 18 therefore rests on the ICAO standard, not on Thai text. The CAAT form and
+    Regulation No. 24 PDFs could not be text-extracted. CATC (catc.or.th) lists CPL/IR integrated courses but shows
+    no age or entry criteria. Flight-hour minimums are not recorded here.
+  tags:
+  - license
+  - aviation
+  - long-prep
+- slug: th-coe-associate-engineer-licence
+  name: Controlled Engineering Licence - Associate Engineer (Kor Wor)
+  name_th: ใบอนุญาตประกอบวิชาชีพวิศวกรรมควบคุม ระดับภาคีวิศวกร (กว.)
+  description: Licence needed to practise controlled engineering (civil, electrical, mechanical, industrial and
+    other branches) in Thailand. Applicants must be Council of Engineers members and pass a knowledge test.
+  category: license/engineering
+  country: TH
+  region: Thailand
+  issuer: Council of Engineers Thailand (สภาวิศวกร)
+  official_url: https://www.coe.or.th/
+  value_benefit: Legal right to practise and sign controlled engineering work; Senior Engineer (สามัญวิศวกร) after
+    3 or more years.
+  cost: Membership and exam fees (not verified)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  min_age: 18
+  age_basis: at_application
+  gender: any
+  min_education: bachelor
+  education_text: Engineering degree (e.g. วศ.บ.) from a COE-accredited programme.
+  conditions_text: No upper age limit. Ordinary membership requires age 18 or over, Thai nationality and an accredited
+    engineering degree (secondary). Knowledge test in basic and branch subjects.
+  recurrence: rolling
+  prep_lead_time_months: 6
+  prerequisites:
+  - accredited engineering degree
+  - COE membership
+  urgency: evergreen
+  source_url: https://www.coe.or.th/
+  last_verified_at: '2026-10-17'
+  verification_status: unverified
+  verification_notes: The official coe.or.th home page returned no readable content. The membership age of 18, nationality
+    and test structure come from Trueplookpanya and a Naresuan University handbook (eng.nu.ac.th); the Engineer
+    Act text was not confirmed.
+  tags:
+  - license
+  - engineering
+  - no-age-cap
+- slug: th-thai-barrister-netibandit
+  name: Thai Barrister-at-Law (Netibandit)
+  name_th: เนติบัณฑิตไทย (สำนักอบรมศึกษากฎหมายแห่งเนติบัณฑิตยสภา)
+  description: The Thai Bar qualification from the Institute of Legal Education of the Thai Bar Association. It
+    is required for the judge and public-prosecutor exams and is a key credential for litigators.
+  category: license/law
+  country: TH
+  region: Thailand
+  issuer: Institute of Legal Education, Thai Bar Association (เนติบัณฑิตยสภา)
+  official_url: https://www.thethaibar.or.th/
+  value_benefit: Barrister-at-law title; prerequisite for the judge-trainee and prosecutor exams.
+  cost: Tuition/registration fees (not verified)
+  nationalities:
+  - TH
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: bachelor
+  education_text: LL.B. (นิติศาสตรบัณฑิต) from a university recognised by the Thai Bar Association; no GPA requirement
+    (secondary).
+  conditions_text: No age limit. One academic year of study (2 semesters) with exams in multiple parts, including
+    legal drafting; registration can be extended if not completed (secondary).
+  recurrence: cohort
+  prep_lead_time_months: 18
+  prerequisites:
+  - LL.B. from a recognised university
+  urgency: preparation_critical
+  source_url: https://www.ilaw.or.th/articles/4654
+  last_verified_at: '2026-10-17'
+  verification_status: unverified
+  verification_notes: The official site thethaibar.or.th refused the connection (ECONNREFUSED), so no official page
+    was read. That Netibandit is required for the judge exams is confirmed via iLaw's summary of the Judicial Service
+    Act. The course structure and eligibility come from secondary sources only.
+  tags:
+  - license
+  - law
+  - long-prep
+  - no-age-cap
+- slug: one-young-world-leading-scholarship
+  name: One Young World Summit - Leading Scholarship
+  description: Flagship scholarship that funds young leaders from every country to attend the annual One Young World
+    Summit as delegates; the 2026 Summit is in Cape Town, 3-6 November 2026.
+  category: networking/fellowship
+  country: INT
+  region: Global
+  issuer: One Young World
+  official_url: https://www.oneyoungworld.com/scholarship/leading-scholarship-2026
+  value_benefit: Full delegate access, meals, Global Leadership Programme and Action Accelerator, Ambassador Community
+    membership; transport/accommodation case by case
+  cost: Scholar pays visa fees and related costs; transport/accommodation not guaranteed
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  min_age: 18
+  max_age: 35
+  age_basis: unspecified
+  gender: any
+  min_education: none
+  conditions_text: 'Official page: ''Are between the ages of 18 - 35''; cannot be under 18 at the time of the Summit.
+    Evidence of commitment to positive change and leadership; priority to under-represented countries; rolling review.'
+  recurrence: annual
+  open_date: '2026-06-11'
+  close_date: '2026-10-31'
+  window_months:
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  prep_lead_time_months: 1
+  prerequisites:
+  - track record of social impact/leadership
+  - English
+  urgency: time_critical
+  source_url: https://www.oneyoungworld.com/scholarship/leading-scholarship-2026
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: 'Fetched official scholarship page: age 18-35, open 11 Jun 2026, deadline 31 Oct 2026 (also
+    labelled ''rolling''), Summit Cape Town 3-6 Nov 2026. Some search snippets and third-party listings quote 18-30
+    (with exceptions over 30) - the fetched official page says 18-35. Standard paid delegate fee not stated.'
+  tags:
+  - age-gated
+  - summit
+  - scholarship
+  - deadline-soon
+- slug: yseali-academic-fellows-program-th
+  name: YSEALI Academic Fellows Program
+  description: Five-week U.S. Department of State exchange at a U.S. university institute for Southeast Asian undergraduates
+    and recent graduates aged 18-25, on themes like civic engagement, environment or social entrepreneurship.
+  category: networking/fellowship
+  country: US
+  region: Asia-Pacific
+  issuer: U.S. Department of State, Bureau of Educational and Cultural Affairs (via U.S. Embassy Bangkok)
+  official_url: https://exchanges.state.gov/non-us/program/yseali-academic-fellows-program
+  value_benefit: Fully funded 5-week academic institute in the U.S. (travel, lodging, programme costs covered by
+    the State Department)
+  cost: No application fee
+  nationalities:
+  - TH
+  - BN
+  - MM
+  - KH
+  - ID
+  - LA
+  - MY
+  - PH
+  - SG
+  - TL
+  - VN
+  thai_eligible: 'yes'
+  min_age: 18
+  max_age: 25
+  age_basis: at_application
+  gender: any
+  min_education: secondary
+  education_text: Part-time or full-time undergraduate, or graduated from an undergraduate programme within the
+    past four years.
+  conditions_text: '''Be between 18 and 25 at the time of application'' (exceptional applicants over 25 may be considered).
+    Citizen and resident of an eligible country incl. Thailand; English proficiency; typically little or no prior
+    U.S./international exchange experience; J-1 visa eligible.'
+  conditions:
+    english: proficient
+    graduated_within_years: 4
+  recurrence: cohort
+  window_months:
+  - 3
+  - 4
+  - 5
+  - 9
+  - 10
+  quota: About 185 fellows region-wide per year (FY2026 NOFO); ~15 from Thailand in past cohorts
+  attempts_limit: 1
+  prep_lead_time_months: 2
+  prerequisites:
+  - undergraduate student or graduate within 4 years
+  - English proficiency
+  - leadership/community engagement record
+  urgency: time_critical
+  source_url: https://exchanges.state.gov/non-us/program/yseali-academic-fellows-program
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: 'Age, education and country eligibility verified on exchanges.state.gov. Thai application
+    windows not confirmed for 2027 cohorts: past U.S. Embassy Bangkok calls closed Oct 2021 (spring) and Apr/May
+    2022-2023 (fall), hence window [3,4,5,9,10]. Quota of ~185 from FY2026 NOFO summary; Thai cohort size (15) from
+    a 2023 call reposted on a third-party site.'
+  tags:
+  - age-gated
+  - under-26
+  - fully-funded
+  - usa
+  - fellowship
+- slug: forbes-30-under-30-asia
+  name: Forbes 30 Under 30 Asia
+  description: Annual Forbes Asia list of 300 young entrepreneurs, leaders and innovators across the Asia-Pacific.
+    Nomination is free and self-nomination is allowed; anyone can be listed only once.
+  category: networking/recognition
+  country: INT
+  region: Asia-Pacific
+  issuer: Forbes Asia
+  official_url: https://www.forbes.com/30-under-30/2026/asia/
+  value_benefit: Public recognition, media exposure and access to the Forbes Under 30 alumni network.
+  cost: Free (no fee to nominate)
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  max_age: 29
+  age_basis: calendar_year
+  gender: any
+  min_education: none
+  conditions_text: 'Class of 2026: nominee must be ''under 30 by December 31, 2025'' (earlier editions: ''29 or
+    younger as of December 31''). Region covers Asia-Pacific incl. Oceania, excl. Middle East. Anyone already on
+    any regional Forbes 30 Under 30 list is excluded.'
+  conditions:
+    prior_listees_excluded: true
+  recurrence: annual
+  window_months:
+  - 11
+  - 12
+  prep_lead_time_months: 12
+  prerequisites:
+  - measurable track record (revenue, funding, impact)
+  urgency: time_critical
+  source_url: https://www.forbes.com/sites/ranawehbe/2025/11/04/nominations-for-forbes-30-under-30-asia-2026-are-now-open/
+  last_verified_at: '2025-11-04'
+  verification_status: partially_verified
+  verification_notes: 'Rules for the Class of 2026 were confirmed from Forbes'' own announcement (4 Nov 2025): nominations
+    close 31 Dec 2025, under 30 by that date, prior listees excluded. The 2027 Asia call is not yet announced. Assuming
+    the same pattern, it would open about Nov 2026 with a 31 Dec 2026 cut-off (born on or after 1 Jan 1997). This
+    is an inference.'
+  tags:
+  - age-gated
+  - once-in-lifetime
+  - recognition
+  - entrepreneurship
+- slug: humboldt-research-fellowship
+  name: Humboldt Research Fellowship
+  description: Alexander von Humboldt Foundation fellowship for non-German researchers to work on their own project
+    with a host in Germany. There are tracks for postdocs (within 4 years of the PhD) and experienced researchers
+    (within 12 years).
+  category: research/fellowship
+  country: DE
+  region: Europe
+  issuer: Alexander von Humboldt Foundation
+  official_url: https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship
+  value_benefit: EUR 3,000/month (postdocs, 6-24 months) or EUR 3,600/month (experienced, 6-18 months), plus lifelong
+    Humboldt alumni network.
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: doctorate
+  education_text: Doctorate within the last 4 years (postdoc) or 12 years (experienced researcher).
+  conditions_text: 'No age limit. Postdocs: doctorate within the last four years. Experienced researchers: within
+    the last twelve years, with a strong publication record and a leadership role. Career breaks extend the window
+    (max 6 years). No more than 90 days in Germany in the 18 months before applying. Three calls a year, each closing
+    at 800 applications.'
+  conditions:
+    max_years_post_phd_postdoc: 4
+    max_years_post_phd_experienced: 12
+    calls_per_year: 3
+  recurrence: annual
+  open_date: '2026-11-15'
+  window_months:
+  - 3
+  - 7
+  - 11
+  prep_lead_time_months: 6
+  prerequisites:
+  - PhD
+  - German host
+  - research proposal
+  - publications
+  urgency: time_critical
+  source_url: https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: All facts confirmed on the official Humboldt page today, including the next call opening on
+    15 Nov 2026 (for the Feb 2027 selection). close_date is null because each call closes when it reaches 800 applications.
+  tags:
+  - years-since-phd
+  - research
+  - germany
+- slug: jsps-postdoctoral-fellowship-standard
+  name: JSPS Postdoctoral Fellowships for Research in Japan (Standard)
+  description: Japan Society for the Promotion of Science fellowships for foreign postdocs to research at Japanese
+    universities for 12-24 months. Applicants go through a Japanese host's open-call application or an overseas
+    nominating authority.
+  category: research/fellowship
+  country: JP
+  region: Asia-Pacific
+  issuer: Japan Society for the Promotion of Science (JSPS)
+  official_url: https://www.jsps.go.jp/english/e-fellow/e-ippan/index.html
+  value_benefit: JPY 362,000/month maintenance allowance, JPY 200,000 settling-in allowance, round-trip airfare
+    and travel insurance; 12-24 months.
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: doctorate
+  education_text: Doctorate obtained within six years of the fellowship start, or expected by the start date.
+  conditions_text: '''have obtained a doctoral degree within six years of the date the fellowship goes into effect''
+    (assessed as of 1 April of the fiscal year; parental leave is subtracted). Citizens of countries with diplomatic
+    relations with Japan; not Japanese citizens or permanent residents; no previous Standard fellowship.'
+  conditions:
+    max_years_post_phd: 6
+    previous_award_disqualifies: true
+  recurrence: annual
+  attempts_limit: 1
+  prep_lead_time_months: 6
+  prerequisites:
+  - PhD (within 6 years)
+  - Japanese host researcher
+  urgency: time_critical
+  source_url: https://www.jsps.go.jp/english/e-fellow/e-ippan/index.html
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: Six-year rule, nationality, duration and allowances confirmed on the official JSPS page today.
+    FY2027 open-call dates were not found (separate schedule page not read). Whether Thailand has an overseas nominating
+    authority (e.g. NRCT) was not confirmed.
+  tags:
+  - years-since-phd
+  - once-in-lifetime
+  - research
+  - japan
+- slug: lindau-nobel-laureate-meeting
+  name: Lindau Nobel Laureate Meetings (Young Scientists)
+  description: Annual week-long meeting in Lindau, Germany, where about 600 young scientists meet Nobel laureates.
+    Thai participants are nominated by NSTDA together with the Princess Maha Chakri Sirindhorn IT Foundation.
+  category: research/fellowship
+  country: DE
+  region: Europe
+  issuer: 'Council for the Lindau Nobel Laureate Meetings; Thai partner: NSTDA'
+  official_url: https://www.lindau-nobel.org/young-scientists/
+  value_benefit: Fully funded participation for Thai nominees (about 6 per year), with networking with Nobel laureates.
+  cost: Free for nominees (costs typically covered by the Thai partner)
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  max_age: 35
+  age_basis: unspecified
+  gender: any
+  min_education: bachelor
+  education_text: Undergraduate, master's and doctoral students, and young postdocs.
+  conditions_text: Lindau's official pages give career stages but not the age text, which is in each year's selection
+    criteria. Partner calls use 'aged up to 35' (Lindau economics page) and 'not older than 35' (India DST 2027,
+    Netherlands KNAW 2024). Usually no permanent position and no prior Lindau attendance. Thai applicants must go
+    through the national partner (NSTDA).
+  conditions:
+    no_prior_participation: true
+    no_permanent_position: true
+  recurrence: annual
+  window_months:
+  - 9
+  - 10
+  attempts_limit: 1
+  prep_lead_time_months: 4
+  prerequisites:
+  - strong research record
+  - recommendation letters
+  - nomination via NSTDA
+  urgency: time_critical
+  source_url: https://www.lindau-nobel.org/nominating-institutions-lino27/
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: NSTDA (Thailand) is confirmed as nominating institution for the 76th meeting (Physiology/Medicine,
+    27 Jun-2 Jul 2027); the application process has run since Sep 2026. The 35 cap comes from Lindau's Young Economists
+    page and partner calls, not the 2027 criteria. NSTDA's 2027 Thai call and its age rule were not found. attempts_limit
+    1 assumes the usual no-repeat rule.
+  tags:
+  - age-gated
+  - once-in-lifetime
+  - research
+  - networking
+- slug: msca-postdoctoral-fellowships
+  name: Marie Sklodowska-Curie Postdoctoral Fellowships (European PF)
+  description: EU Horizon Europe fellowships for researchers of any nationality to carry out a 1-2 year project
+    at a host in an EU Member State or Associated Country.
+  category: research/fellowship
+  country: INT
+  region: Europe
+  issuer: European Commission / European Research Executive Agency (REA)
+  official_url: https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships
+  value_benefit: Living, mobility and optional family allowances plus research, training and networking costs for
+    12-24 months (European PF).
+  cost: Free
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  age_basis: unspecified
+  gender: any
+  min_education: doctorate
+  education_text: PhD held by the call deadline (a defended thesis counts).
+  conditions_text: 'No age limit. At most 8 years of research experience after the PhD, counted at the call deadline
+    (career breaks excluded). Mobility rule: no more than 12 months in the host country in the 36 months before
+    the deadline. The Global PF variant is limited to EU/Associated Country nationals or residents, so Thais use
+    the European PF.'
+  conditions:
+    max_years_post_phd: 8
+    mobility_rule: <=12 of last 36 months in host country
+  recurrence: annual
+  open_date: '2026-04-09'
+  close_date: '2026-09-09'
+  window_months:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  prep_lead_time_months: 6
+  prerequisites:
+  - PhD
+  - host supervisor in EU/Associated Country
+  - project proposal
+  urgency: time_critical
+  source_url: https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships
+  last_verified_at: '2026-10-17'
+  verification_status: verified
+  verification_notes: The 8-year rule, mobility rule and nationality split confirmed on the official MSCA page;
+    2026 call dates (9 Apr-9 Sep 2026) confirmed on the REA page. The 2026 call has closed; 2027 dates are not yet
+    published. Allowance amounts were not checked.
+  tags:
+  - years-since-phd
+  - research
+  - europe
+- slug: aiesec-global-volunteer
+  name: AIESEC Global Volunteer
+  name_th: AIESEC Global Volunteer (อาสาสมัครต่างประเทศ)
+  description: Short-term (typically 6-8 week) international volunteer projects tied to the SDGs, run through AIESEC's
+    network in 100+ countries; Thai youth apply via AIESEC in Thailand.
+  category: volunteering/youth
+  country: INT
+  region: Global
+  issuer: AIESEC
+  official_url: https://aiesec.org/global-volunteer
+  value_benefit: Volunteer placement abroad with accommodation (often food) arranged, visa/arrival support, cultural
+    preparation
+  cost: Signing up and applying is free; a programme fee applies per project (varies by country, e.g. ~AUD 950 base
+    fee in Australia); flights, insurance and visa paid by participant
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  min_age: 18
+  max_age: 30
+  age_basis: unspecified
+  gender: any
+  min_education: none
+  conditions_text: 'AIESEC UK: ''this program is for people between 18 and 30 years old''. Basic English; mandatory
+    life and health insurance; individual projects may add conditions.'
+  conditions:
+    insurance: mandatory
+  recurrence: rolling
+  prep_lead_time_months: 2
+  prerequisites:
+  - basic English
+  - travel insurance
+  - passport
+  urgency: time_critical
+  source_url: https://aiesec.co.uk/global-volunteer
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: 18-30 age range confirmed on AIESEC UK's official Global Volunteer page via search result;
+    the global aiesec.org page fetched today does not state age or fees. AIESEC in Thailand's fee and process not
+    confirmed.
+  tags:
+  - age-gated
+  - under-31
+  - volunteering
+  - short-term
+- slug: asean-youth-volunteer-programme-ayvp
+  name: ASEAN Youth Volunteer Programme (AYVP)
+  description: ASEAN University Network flagship programme sending teams of young ASEAN volunteers to community
+    projects in the region.
+  category: volunteering/youth
+  country: INT
+  region: Asia-Pacific
+  issuer: ASEAN University Network / AYVP Secretariat (Universiti Kebangsaan Malaysia)
+  official_url: https://www.ukm.my/i-kom/ayvp/
+  value_benefit: Regional volunteering experience, training and ASEAN youth network
+  cost: Participants cover their own airfare, insurance and visa
+  nationalities:
+  - TH
+  - BN
+  - KH
+  - ID
+  - MY
+  - MM
+  - LA
+  - PH
+  - SG
+  - VN
+  thai_eligible: 'yes'
+  min_age: 18
+  max_age: 30
+  age_basis: unspecified
+  gender: any
+  min_education: none
+  conditions_text: '''Open to nationals of ASEAN countries''; ''Aged between 18 to 30''; fluent written and spoken
+    English; able to work in multicultural settings and commit fully.'
+  conditions:
+    english: fluent
+  recurrence: annual
+  prep_lead_time_months: 2
+  prerequisites:
+  - ASEAN nationality
+  - fluent English
+  urgency: time_critical
+  source_url: https://www.ukm.my/i-kom/ayvp/
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: Eligibility (ASEAN nationals incl. Thailand, 18-30, self-funded travel) read on the UKM-hosted
+    AYVP page today, but the page is headed 'Get ready for AYVP 2025' with no dates; whether a 2026/2027 edition
+    is running and its application window are not confirmed.
+  tags:
+  - age-gated
+  - under-31
+  - volunteering
+  - asean
+- slug: sseayp-ship-for-southeast-asian-japanese-youth-th
+  name: Ship for Southeast Asian and Japanese Youth Program (SSEAYP)
+  name_th: โครงการเรือเยาวชนเอเชียอาคเนย์
+  description: Japanese-government-run ~35-day voyage bringing together 200+ youths from ASEAN and Japan for discussions,
+    cultural exchange and port-of-call programmes; Thailand is a founding member and selects its own delegation
+    through the Department of Children and Youth.
+  category: volunteering/youth
+  country: JP
+  region: Asia-Pacific
+  issuer: Cabinet Office, Government of Japan; Thai selection by Department of Children and Youth (MSDHS)
+  official_url: https://www8.cao.go.jp/youth/kouryu/en/sseayp/2025/sseayp.html
+  value_benefit: Funded participation on the ship programme (about 30-35 days), country programmes, homestay; lifelong
+    SSEAYP alumni network
+  cost: Programme sponsored by the Government of Japan; personal/pre-departure training costs may apply (Thai cost
+    rules not confirmed)
+  nationalities:
+  - TH
+  - BN
+  - KH
+  - ID
+  - LA
+  - MY
+  - MM
+  - PH
+  - SG
+  - VN
+  - TL
+  - JP
+  thai_eligible: 'yes'
+  min_age: 18
+  max_age: 30
+  age_basis: unspecified
+  gender: any
+  min_education: none
+  conditions_text: 'Participating Youths aged 18-30 (Cabinet Office 49th programme report; Singapore 50th call:
+    ''between 18 and 30 years old, as of 1 January 2027''). Good English, youth/community leadership record, fitness
+    for sea travel, mandatory pre-departure training. Thai delegation (about 16 PYs + National Leader in the 49th
+    programme) selected by DCY.'
+  conditions:
+    english: good command
+    pre_departure_training: true
+  recurrence: annual
+  window_months:
+  - 3
+  - 4
+  quota: About 16 Participating Youths per country (49th programme)
+  attempts_limit: 1
+  prep_lead_time_months: 4
+  prerequisites:
+  - Thai nationality
+  - good English
+  - youth/community leadership track record
+  - availability ~35 days in Jan-Feb plus months of training
+  urgency: time_critical
+  source_url: https://www.dcy.go.th/content/1636517892439/1743403472623
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: 'Programme, Thailand participation and 18-30 age range confirmed via Cabinet Office SSEAYP
+    pages/reports and the Singapore NYC 50th SSEAYP factsheet (3 Jan-5 Feb 2027 voyage). Thai call: DCY announcement
+    for the 49th (2026) programme exists (dcy.go.th, could not be rendered); the Thai age wording/basis and the
+    Thai 50th-programme (2027) call dates are not confirmed. Window [3,4] inferred from past Thai calls (48th closed
+    22 Apr 2024) and Singapore''s 30 Mar-24 Apr 2026 window; the 2027 voyage selection has likely closed, so the
+    next realistic intake is the 51st (2028).'
+  tags:
+  - age-gated
+  - once-in-lifetime
+  - under-31
+  - youth-exchange
+  - fully-funded
+- slug: un-university-volunteers-th
+  name: UN University Volunteers (UNV)
+  description: UNV modality for currently enrolled university students to serve 6-12 month UN assignments, typically
+    arranged through partner universities.
+  category: volunteering/youth
+  country: INT
+  region: Global
+  issuer: United Nations Volunteers (UNV) programme
+  official_url: https://www.unv.org/become-volunteer/volunteer-abroad/requirements
+  value_benefit: Monthly Volunteer Living Allowance, health and life insurance, travel and settling-in grant if
+    applicable
+  nationalities:
+  - '*'
+  thai_eligible: partial
+  min_age: 18
+  max_age: 29
+  age_basis: at_start
+  gender: any
+  min_education: secondary
+  enrollment_required:
+  - bachelor
+  - master
+  - doctorate
+  education_text: Enrolled in a university programme (some postings also accept recent graduates).
+  conditions_text: 'UNV sponsorship brochure: ''18 to 29 years old; enrolled in a university programme; up to two
+    years of working experience''. Vacancies: age ''between 18 and 29 throughout the entire duration of their assignment''.
+    Note the UNV requirements page states 18-26 for both youth and university volunteers, so the cap varies by assignment.'
+  conditions:
+    work_experience_years_max: 2
+  recurrence: rolling
+  prep_lead_time_months: 3
+  prerequisites:
+  - current university enrolment
+  - partner university or sponsor
+  urgency: time_critical
+  source_url: https://www.unv.org/sites/default/files/51504%20-%20UNV%20Sponsoring%20University%20Volunteers_web.pdf
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: 18-29 seen in an official UNV brochure (undated, ~2017 data) and live vacancies via search
+    results; the UNV requirements page states 18-26. Most assignments run through partner universities/donor funding;
+    no Thai partner-university scheme was confirmed, hence thai_eligible 'partial'.
+  tags:
+  - age-gated
+  - student
+  - volunteering
+  - un
+  - stipend
+- slug: un-youth-volunteers-th
+  name: UN Youth Volunteers (UNV)
+  description: UN Volunteers modality for young people aged 18-26 to serve on UN assignments abroad or at home,
+    usually 6-12 months, with a monthly living allowance.
+  category: volunteering/youth
+  country: INT
+  region: Global
+  issuer: United Nations Volunteers (UNV) programme
+  official_url: https://www.unv.org/become-volunteer/volunteer-abroad/requirements
+  value_benefit: Volunteer Living Allowance, health and life insurance, travel and settling-in grant where applicable;
+    UN work experience
+  nationalities:
+  - '*'
+  thai_eligible: 'yes'
+  min_age: 18
+  max_age: 26
+  age_basis: unspecified
+  gender: any
+  min_education: vocational
+  education_text: Higher technical diploma, Bachelor's or Master's degree required for most assignments.
+  conditions_text: 'UNV: ''the age range for UN Youth Volunteers and UN University Volunteers is 18-26 years'' (some
+    assignments: 26 or younger during the first year of contract). 0-3 years of experience; working knowledge of
+    English, French or Spanish. Many youth assignments are funded by a donor country for its own nationals, so Thai-eligible
+    posts depend on the funding source; nationals of the assignment country cannot take international posts.'
+  conditions:
+    work_experience_years_max: 3
+    languages: English/French/Spanish
+  recurrence: rolling
+  prep_lead_time_months: 2
+  prerequisites:
+  - UNV Talent Pool profile
+  - diploma or degree
+  - English/French/Spanish
+  urgency: time_critical
+  source_url: https://www.unv.org/become-volunteer/volunteer-abroad/requirements
+  last_verified_at: '2026-10-17'
+  verification_status: partially_verified
+  verification_notes: 18-26 age range seen on the official unv.org requirements page via search result (direct fetch
+    blocked by Incapsula/403). Thai eligibility for individual assignments depends on the sponsor (many youth posts
+    are donor-country-restricted); not confirmed which assignments are open to Thais.
+  tags:
+  - age-gated
+  - under-27
+  - volunteering
+  - un
+  - stipend

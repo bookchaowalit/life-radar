@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "radar": {
+      "command": ".venv/bin/radar-mcp",
+      "args": []
+    }
+  }
+}
