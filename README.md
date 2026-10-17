@@ -13,9 +13,9 @@ caller's token. Cell-specific code is in `src/life_radar/`.
 
 | | |
 |---|---|
-| API | Railway project `life-radar`, service `radar-api` (Serverless) — **not provisioned yet** |
-| Data | Neon project `life-radar`, database `radar` — **not provisioned yet** |
-| Registry | solo-empire `repository-catalog/registries/online-systems.yaml` (`radar`) — **not registered yet** |
+| API | Railway project `life-radar`, service `radar-api` (Serverless, Singapore): https://radar-api-production-7fe7.up.railway.app |
+| Data | Neon project `life-radar` (aws-ap-southeast-1), database `radar` |
+| Registry | solo-empire `repository-catalog/registries/online-systems.yaml` (`radar`) |
 
 ## Model
 
@@ -94,12 +94,25 @@ uv venv .venv && uv pip install --python .venv/bin/python -e ".[dev]"
 .venv/bin/radar-local down
 ```
 
-Hosted (needs the owner's approval; not done yet):
+Hosted (done 2026-10-17; rerun only to change it):
 
 ```bash
 NEON_API_KEY=... .venv/bin/radar-db provision
 npm install && railway config apply && railway up --ci --service radar-api
 railway scale --service radar-api asia-southeast1-eqsg3a=1 us-east4-eqdc4a=0   # next to Neon and the platform
+```
+
+Before the hosted API answers anything but `/health`, the owner's workspace needs the radar
+permissions and a token with `radar-api` in its audience. Both come from the empire-platform
+checkout, on the machine that holds its hosted database URLs and signing key:
+
+```bash
+EMPIRE_DB_MODE=hosted .venv/bin/empire-cells grant --workspace owner --cell radar
+EMPIRE_DB_MODE=hosted .venv/bin/empire-automations provision --workspace owner \
+    --tokens ~/.config/empire-platform/tokens --key-dir ~/.config/empire-platform/signing \
+    --issuer empire-platform --ttl-days 30      # owner-mcp now carries radar read/write
+.venv/bin/radar-seed api --api https://radar-api-production-7fe7.up.railway.app \
+    --token-file ~/.config/empire-platform/tokens/owner-mcp.jwt
 ```
 
 Railway variables: `RADAR_DB_MODE=hosted`, `RADAR_DB_URL_API`, `RADAR_JWT_PUBLIC_KEY_PEM` (or

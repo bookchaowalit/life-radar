@@ -2,7 +2,7 @@
 
 **Slug:** `bookchaowalit/life-radar`
 **Written:** 2026-10-17
-**Status:** v0.1 — cell scaffolded, tested locally; not provisioned, not deployed, no repository remote
+**Status:** v0.1 — deployed (Railway + Neon, 2026-10-17); seed not yet loaded on hosted (needs the owner grant + token)
 
 ## Problem
 
@@ -60,8 +60,8 @@ because you said no but because you never knew they existed, or found out after 
 
 ## Roadmap
 
-1. **Approve and go live (owner):** create the GitHub repository, `radar-db provision` (Neon),
-   first Railway deploy, register `radar` in the solo-empire registry, load the seed via the API.
+1. **Go live:** repository, Neon, Railway and registry done 2026-10-17; left: grant the owner the
+   `radar` permissions, mint a token with `radar-api`, load the seed via the API.
 2. **Catalog depth:** more categories (networking, health and sport, government rights by age),
    other nationalities, re-verification routine (rows older than 12 months get `verify_again`).
 3. **Delivery:** weekly digest "what changed in your radar", calendar export of `start_prep_by` and

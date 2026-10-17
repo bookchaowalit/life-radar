@@ -34,10 +34,10 @@ owner: Product owner (Book Dev)
 | Stack | FastAPI, Python, PostgreSQL (cell kit) |
 | Tests | 53 ผ่าน, 7 ข้าม (ของ kit: ไม่มี graph/ref) — contract tests ของ kit + rules + radar API + seed loader (`.venv/bin/pytest -q`, 2026-10-17) |
 | Seed v1 | 57 แถว: verified 24, partially_verified 30, unverified 3 (`seeds/README.md`) |
-| CI | ไม่มี |
-| Deploy | Dockerfile + `.railway/railway.ts` — ยังไม่ได้ provision Neon / deploy Railway (รอเจ้าของอนุมัติ) |
-| GitHub remote | ยังไม่มี (git local เท่านั้น) |
-| Live URL | ไม่มี |
+| CI | GitHub Actions (`.github/workflows/test.yml`): `radar-seed check` + `pytest` |
+| Deploy | Railway `life-radar` / `radar-api` (Serverless, Singapore) + Neon `life-radar` — deploy 2026-10-17, `/health` 200 |
+| GitHub | https://github.com/bookchaowalit/life-radar (public) |
+| Live URL | https://radar-api-production-7fe7.up.railway.app (ต้องใช้ token ที่มี audience `radar-api`) |
 
 ## 5. คุณค่าและจุดต่าง
 
@@ -50,7 +50,7 @@ owner: Product owner (Book Dev)
 
 - Seed เป็นชุดเริ่มต้น ไม่ครอบคลุมทั้งหมด และบางแถวยืนยันได้บางส่วน (ดู `seeds/README.md`)
 - ยังไม่มีการแจ้งเตือน, UI, calendar export หรือรอบตรวจสอบข้อมูลซ้ำอัตโนมัติ
-- ยังไม่มี CI
+- seed ยังไม่ได้โหลดขึ้น hosted: ต้อง grant สิทธิ์ `radar` ให้ workspace ของเจ้าของและออก token ก่อน (ต้องใช้เครื่องที่มี key ของ empire-platform)
 
 ## 7. คำตัดสิน
 
@@ -58,8 +58,8 @@ owner: Product owner (Book Dev)
 
 ## 8. ขั้นต่อไป
 
-1. เจ้าของอนุมัติ: สร้าง GitHub repo, `radar-db provision` (Neon), deploy Railway, ลงทะเบียน `radar` ใน registry
-2. โหลด seed ผ่าน API และสร้าง profile ของเจ้าของ
+1. ~~สร้าง GitHub repo, provision Neon, deploy Railway, ลงทะเบียน registry~~ (เสร็จ 2026-10-17)
+2. `empire-cells grant --cell radar` + ออก token ใหม่ แล้วโหลด seed ผ่าน API และสร้าง profile ของเจ้าของ
 3. ตรวจสอบแถวที่ `partially_verified` / `unverified` ซ้ำ และเพิ่มหมวดที่ยังบาง
 4. เพิ่ม digest รายสัปดาห์ / calendar export
 
