@@ -25,8 +25,8 @@ from typing import Any
 
 import yaml
 from fastapi.encoders import jsonable_encoder
-from pydantic import ValidationError
 from psycopg.types.json import Jsonb
+from pydantic import ValidationError
 
 from cellkit.app import models
 from cellkit.spec import Cell, Resource

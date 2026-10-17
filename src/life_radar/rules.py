@@ -22,7 +22,7 @@ at programme start, unverified source...).
 from __future__ import annotations
 
 import calendar
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import date, timedelta
 from typing import Any
 
@@ -53,7 +53,7 @@ class Person:
     enrolled_in: str = "none"
 
     @classmethod
-    def of(cls, row: dict[str, Any]) -> "Person":
+    def of(cls, row: dict[str, Any]) -> Person:
         """From a profile row (or a POST /v1/radar body)."""
         birth = row["birthdate"]
         if isinstance(birth, str):
@@ -218,9 +218,7 @@ def classify(
 
     # Hard eligibility: who you are, not what you can still do.
     allowed = [str(c).upper() for c in opp.get("nationalities") or []]
-    if allowed and "*" not in allowed and not person.nationalities & set(allowed):
-        reasons.append("nationality")
-    elif (
+    if (allowed and "*" not in allowed and not person.nationalities & set(allowed)) or (
         not allowed
         and "TH" in person.nationalities
         and opp.get("thai_eligible") == "no"
