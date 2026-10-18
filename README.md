@@ -98,9 +98,14 @@ Hosted (done 2026-10-17; rerun only to change it):
 
 ```bash
 NEON_API_KEY=... .venv/bin/radar-db provision
-npm install && railway config apply && railway up --ci --service radar-api
+npm install && railway config apply   # service settings only; code deploys from GitHub (below)
 railway scale --service radar-api asia-southeast1-eqsg3a=1 us-east4-eqdc4a=0   # next to Neon and the platform
 ```
+
+Deploys (CD, since 2026-10-18): `radar-api` is connected to this repository's `main` with
+Railway's Wait for CI (`checkSuites`). A merge to `main` deploys only after the CI and security
+checks pass; a failing check leaves production on the previous deployment. Roll back by
+redeploying an earlier deployment in Railway. `railway up` is no longer used.
 
 Before the hosted API answers anything but `/health`, the owner's workspace needs the radar
 permissions and a token with `radar-api` in its audience. Both come from the empire-platform
