@@ -115,7 +115,8 @@ EMPIRE_DB_MODE=hosted .venv/bin/empire-automations provision --workspace owner \
     --token-file ~/.config/empire-platform/tokens/owner-mcp.jwt
 ```
 
-Railway variables: `RADAR_DB_MODE=hosted`, `RADAR_DB_URL_API`, `RADAR_JWT_PUBLIC_KEY_PEM` (or
+Railway variables: `SENTRY_DSN` (error reporting; unset = off, see
+`src/cellkit/_sentry.py`), `RADAR_DB_MODE=hosted`, `RADAR_DB_URL_API`, `RADAR_JWT_PUBLIC_KEY_PEM` (or
 `RADAR_JWT_JWKS_URL`), `RADAR_JWT_ISSUER`, `EMPIRE_PLATFORM_URL`.
 
 Docs: [`PRODUCT.md`](PRODUCT.md) (product brief, roadmap) and [`DOCPACK/`](DOCPACK/) (product card).
