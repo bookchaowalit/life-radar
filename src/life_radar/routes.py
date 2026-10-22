@@ -9,12 +9,15 @@ prefix: ``abroad`` matches ``abroad`` and ``abroad/working-holiday``). The rules
 """
 
 from datetime import date
-from typing import Annotated, Any, Literal
+from typing import Annotated, Any, Literal, get_args
 
+import psycopg
 from fastapi import HTTPException, Query
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel, ConfigDict, Field
 
+from cellkit.app import Context
+from cellkit.auth import Principal
 from life_radar.rules import EDUCATION, Person, radar
 
 MAX_ROWS = 20_000  # catalog rows per workspace; a bigger one gets 413 instead of an unbounded scan
@@ -23,7 +26,7 @@ OPPORTUNITY_COLUMNS = (
     " age_basis, gender, min_education, enrollment_required, recurrence, open_date, close_date, window_months,"
     " attempts_limit, prep_lead_time_months, urgency, source_url, last_verified_at, verification_status, status"
 )
-Level = Literal[EDUCATION]  # type: ignore[valid-type]
+Level = Literal[EDUCATION]  # type: ignore[valid-type]  # Literal of the runtime EDUCATION tuple: one list of levels for rules and API
 
 
 class AdHocProfile(BaseModel):
@@ -45,17 +48,20 @@ def category_filter(category: str | None) -> tuple[str, list[Any]]:
     return " AND (category = %s OR category LIKE %s)", [prefix, escaped + "/%"]
 
 
-def register(ctx) -> None:
+def register(ctx: Context) -> None:
     schema, cell = ctx.cell.schema, ctx.cell.name
     opportunities = f"{schema}.{ctx.cell.resource('opportunity').table}"
     statuses = f"{schema}.{ctx.cell.resource('opportunity-status').table}"
-    Caller = (
-        ctx.caller
-    )  # a real annotation object: FastAPI must see the dependency, not a string
+    # ctx.caller is the kit's Annotated[Principal, Depends(...)]. Rebuilding it from its parts gives
+    # mypy a real alias (the caller is a Principal) while FastAPI still sees the same dependency.
+    _, authenticate = get_args(ctx.caller)
+    Caller = Annotated[Principal, authenticate]
 
-    def catalog(conn, category: str | None) -> list[dict[str, Any]]:
+    def catalog(
+        conn: psycopg.Connection[Any], category: str | None
+    ) -> list[dict[str, Any]]:
         extra, params = category_filter(category)
-        rows = conn.execute(
+        rows: list[dict[str, Any]] = conn.execute(
             f"SELECT {OPPORTUNITY_COLUMNS} FROM {opportunities} WHERE status = 'active'{extra}"
             " ORDER BY slug LIMIT %s",
             [*params, MAX_ROWS + 1],
@@ -68,7 +74,8 @@ def register(ctx) -> None:
         return rows
 
     def answer(result: dict[str, Any], **extra: Any) -> dict[str, Any]:
-        return jsonable_encoder({**extra, **result})
+        encoded: dict[str, Any] = jsonable_encoder({**extra, **result})
+        return encoded
 
     @ctx.app.get("/v1/profiles/{profile_id}/radar", tags=["radar"])
     def profile_radar(

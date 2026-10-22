@@ -160,9 +160,10 @@ def windows(
                 end = date(end_year, last, calendar.monthrange(end_year, last)[1])
                 if end >= today and start < until and start > after:
                     out.append((start, end))
-    elif open_date is not None or close_date is not None:
-        # Known dates of one cycle, no months: assume the same dates every year.
-        first_open, first_close = open_date or close_date, close_date or open_date
+    elif (cycle := open_date or close_date) is not None:
+        # Known dates of one cycle, no months: assume the same dates every year (a missing
+        # end of the cycle is the date that is known).
+        first_open, first_close = open_date or cycle, close_date or cycle
         for shift in range(1, until.year - first_close.year + 2):
             start, end = add_years(first_open, shift), add_years(first_close, shift)
             if end >= today and start < until:
@@ -332,13 +333,14 @@ def radar(
             continue
         item = classify(opp, person, today, horizon_years)
         if statuses is not None:
-            mine = statuses.get(opp.get("id"))
+            opp_id = opp.get("id")
+            mine = statuses.get(opp_id) if opp_id is not None else None
             item["my_status"] = mine["status"] if mine else None
         buckets[item["bucket"]].append(item)
 
     far = date.max
 
-    def soonest(item: dict[str, Any]) -> tuple:
+    def soonest(item: dict[str, Any]) -> tuple[date, date, date, date, str]:
         return (
             item["start_prep_by"] or far,
             item["latest_chance"] or far,

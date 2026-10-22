@@ -21,7 +21,7 @@ import os
 import sys
 import uuid
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import yaml
 from fastapi.encoders import jsonable_encoder
@@ -30,6 +30,10 @@ from pydantic import ValidationError
 
 from cellkit.app import models
 from cellkit.spec import Cell, Resource
+
+if TYPE_CHECKING:  # annotations only; httpx is imported where the api mode needs it
+    import httpx
+    import psycopg
 
 REQUIRED_PROVENANCE = ("source_url", "last_verified_at", "verification_status")
 
@@ -95,7 +99,10 @@ def read(path: Path, resource: Resource) -> tuple[dict[str, Any], list[dict[str,
 
 
 def upsert_db(
-    conn, cell: Cell, workspace: uuid.UUID, rows: list[dict[str, Any]]
+    conn: psycopg.Connection[Any],
+    cell: Cell,
+    workspace: uuid.UUID,
+    rows: list[dict[str, Any]],
 ) -> dict[str, int]:
     """Insert or update by slug inside one workspace; returns counts. The caller commits."""
     r = cell.resource("opportunity")
@@ -131,7 +138,10 @@ def upsert_db(
 
 
 def upsert_api(
-    client, headers: dict[str, str], version: int, rows: list[dict[str, Any]]
+    client: httpx.Client,
+    headers: dict[str, str],
+    version: int,
+    rows: list[dict[str, Any]],
 ) -> dict[str, int]:
     """The same upsert through the cell API (platform executions and audit included)."""
     existing: dict[str, dict[str, Any]] = {}

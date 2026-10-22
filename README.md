@@ -87,8 +87,9 @@ citizens, every row with an official `source_url`, `last_verified_at` and `verif
 ## Develop and operate
 
 ```bash
-uv venv .venv && uv pip install --python .venv/bin/python -e ".[dev]"
+uv sync --frozen --all-extras          # Python 3.12 (.python-version): pgserver has no cp313 wheel yet
 .venv/bin/pytest -q
+.venv/bin/mypy . && uvx ruff@0.17.1 check . && uvx ruff@0.17.1 format --check .   # the same checks CI runs
 .venv/bin/radar-local up                       # local PostgreSQL in .runtime/pgdata (socket in $XDG_RUNTIME_DIR, path < 100 chars)
 .venv/bin/radar-seed db --workspace "$(python3 -c 'import uuid; print(uuid.uuid4())')"
 .venv/bin/radar-local down
@@ -101,6 +102,10 @@ NEON_API_KEY=... .venv/bin/radar-db provision
 npm install && railway config apply   # service settings only; code deploys from GitHub (below)
 railway scale --service radar-api asia-southeast1-eqsg3a=1 us-east4-eqdc4a=0   # next to Neon and the platform
 ```
+
+Dependencies are locked in `uv.lock`; the image installs them with `uv sync --frozen`, so
+production runs the versions CI tested. Change a dependency with `uv add`/`uv lock` and commit
+the lock. Product scope and measures: [PRODUCT.md](PRODUCT.md); change records: `specs/`.
 
 Deploys (CD, since 2026-10-18): `radar-api` is connected to this repository's `main` with
 Railway's Wait for CI (`checkSuites`). A merge to `main` deploys only after the CI and security

@@ -5,7 +5,7 @@
   variables and `~/.config/solo-radar/` (owner-only).
 - Tests use a throwaway local PostgreSQL and a fake platform; they must never reach
   the hosted database or the hosted platform.
-- Run `.venv/bin/pytest -q` before committing. Migrations are append-only: never edit
+- Run `.venv/bin/pytest -q`, `.venv/bin/mypy .` and `uvx ruff@0.17.1 check . && uvx ruff@0.17.1 format --check .` before committing. Migrations are append-only: never edit
   an applied file, add a new numbered one (`0001_radar.sql` is applied on Neon since 2026-10-17).
 - `src/cellkit` is this repository's own copy of the cell kit (taken from `life-opportunities-api`
   on 2026-10-17). Change it here; there is nothing upstream to sync from.
