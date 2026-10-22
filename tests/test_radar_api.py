@@ -48,7 +48,8 @@ def test_seed_db_is_idempotent_and_updates_changed_rows(
     }
     items = client.get("/v1/opportunities", headers=owner).json()["items"]
     row = next(i for i in items if i["slug"] == "test-working-holiday")
-    assert row["max_age"] == 35 and row["version"] == 2
+    assert row["max_age"] == 35
+    assert row["version"] == 2
 
 
 def test_seed_rows_stay_inside_their_workspace(harness, owner, client, platform):
@@ -85,14 +86,14 @@ def test_seed_file_is_refused_without_provenance(harness, tmp_path):
     bad.write_text(yaml.safe_dump(data))
     with pytest.raises(SeedError) as error:
         read(bad, harness.cell.resource("opportunity"))
-    assert "missing source_url" in str(error.value) and "duplicate slug" in str(
-        error.value
-    )
+    assert "missing source_url" in str(error.value)
+    assert "duplicate slug" in str(error.value)
 
 
 def test_the_curated_seed_file_is_valid(harness, cell_root):
     header, rows = read(default_file(cell_root), harness.cell.resource("opportunity"))
-    assert header["version"] >= 1 and 30 <= len(rows) <= 80
+    assert header["version"] >= 1
+    assert 30 <= len(rows) <= 80
     for row in rows:
         assert row["source_url"].startswith("https://") or row["source_url"].startswith(
             "http://"
@@ -136,7 +137,8 @@ def test_the_curated_seed_loads_and_answers_a_thai_profile(
     )
     assert out.status_code == 200, out.text
     body = out.json()
-    assert body["age"] == 29 and sum(body["counts"].values()) == counts["inserted"]
+    assert body["age"] == 29
+    assert sum(body["counts"].values()) == counts["inserted"]
     urgent = body["buckets"]["prepare_now"] + body["buckets"]["closing_by_age"]
     assert any(i["category"].startswith("abroad/working-holiday") for i in urgent)
 
@@ -190,9 +192,8 @@ def test_profile_radar_buckets_and_statuses(harness, owner, client):
         json={"birthdate": "1993-03-01", "nationality": "TH"},
     ).json()
     late = older["buckets"]["prepare_now"]
-    assert [i["slug"] for i in late] == ["test-scholarship"] and late[0][
-        "latest_chance"
-    ] == "2027-05-31"
+    assert [i["slug"] for i in late] == ["test-scholarship"]
+    assert late[0]["latest_chance"] == "2027-05-31"
     assert "preparation_behind_schedule" in late[0]["caveats"]
     assert [i["slug"] for i in older["buckets"]["missed"]] == ["test-working-holiday"]
 
@@ -209,7 +210,7 @@ def test_radar_category_prefix_and_validation(harness, owner, client):
     assert sum(out["counts"].values()) == 1
     assert client.post(
         "/v1/radar", headers=owner, params={"category": "abr"}, json=body
-    ).json()["counts"] == {k: 0 for k in out["counts"]}
+    ).json()["counts"] == dict.fromkeys(out["counts"], 0)
     assert (
         client.post(
             "/v1/radar", headers=owner, json={**body, "nationality": "THA"}

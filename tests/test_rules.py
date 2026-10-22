@@ -73,7 +73,8 @@ def test_annual_windows_from_months():
     found, known = windows(
         {"recurrence": "annual", "window_months": [9, 10]}, TODAY, date(2028, 12, 31)
     )
-    assert known and found[0] == (date(2026, 9, 1), date(2026, 10, 31))
+    assert known
+    assert found[0] == (date(2026, 9, 1), date(2026, 10, 31))
     assert (date(2027, 9, 1), date(2027, 10, 31)) in found
 
 
@@ -83,7 +84,8 @@ def test_annual_windows_repeat_known_dates():
         TODAY,
         date(2028, 12, 31),
     )
-    assert known and found == [
+    assert known
+    assert found == [
         (date(2027, 2, 1), date(2027, 3, 31)),
         (date(2028, 2, 1), date(2028, 3, 31)),
     ]
@@ -92,7 +94,8 @@ def test_annual_windows_repeat_known_dates():
 def test_working_holiday_closing_by_age():
     item = classify(opp(min_age=18, max_age=30), THAI_29, TODAY)
     assert item["bucket"] == "closing_by_age"
-    assert item["age_closes_on"] == date(2028, 3, 1) and item["years_left"] == 1.4
+    assert item["age_closes_on"] == date(2028, 3, 1)
+    assert item["years_left"] == 1.4
     assert "open_now" in item["flags"]
 
 
@@ -110,7 +113,8 @@ def test_last_annual_window_before_the_cap_is_the_latest_chance():
     item = classify(
         opp(max_age=30, recurrence="annual", window_months=[5, 6]), THAI_29, TODAY
     )
-    assert item["windows_left"] == 1 and item["latest_chance"] == date(2027, 6, 30)
+    assert item["windows_left"] == 1
+    assert item["latest_chance"] == date(2027, 6, 30)
     assert item["bucket"] == "closing_by_age"
 
 
@@ -120,14 +124,16 @@ def test_no_window_left_before_the_cap_is_missed():
     item = classify(
         opp(max_age=29, recurrence="annual", window_months=[6]), person, TODAY
     )
-    assert item["bucket"] == "missed" and "no_window_before_age_cap" in item["reasons"]
+    assert item["bucket"] == "missed"
+    assert "no_window_before_age_cap" in item["reasons"]
 
 
 def test_aged_out_and_too_young():
     assert classify(opp(max_age=25), THAI_29, TODAY)["bucket"] == "missed"
     teen = Person(birthdate=date(2010, 1, 1), nationalities=frozenset({"TH"}))
     item = classify(opp(min_age=18, max_age=30), teen, TODAY)
-    assert item["bucket"] == "opens_later" and item["age_opens_on"] == date(2028, 1, 1)
+    assert item["bucket"] == "opens_later"
+    assert item["age_opens_on"] == date(2028, 1, 1)
 
 
 def test_nationality_gender_and_student_rules():
@@ -176,9 +182,8 @@ def test_one_off_deadline_and_closed_one_off():
         prep_lead_time_months=3,
     )
     item = classify(upcoming, THAI_29, TODAY)
-    assert item["bucket"] == "prepare_now" and item["latest_chance"] == date(
-        2027, 1, 31
-    )
+    assert item["bucket"] == "prepare_now"
+    assert item["latest_chance"] == date(2027, 1, 31)
     closed = opp(recurrence="one_off", close_date="2026-01-31")
     assert classify(closed, THAI_29, TODAY)["bucket"] == "missed"
 
@@ -202,4 +207,33 @@ def test_radar_skips_inactive_and_sorts(status):
     out = radar(rows, THAI_29, TODAY, statuses={2: {"status": "preparing"}})
     assert [i["slug"] for i in out["buckets"]["closing_by_age"]] == ["soon", "late"]
     assert out["buckets"]["closing_by_age"][0]["my_status"] == "preparing"
-    assert sum(out["counts"].values()) == 2 and out["age"] == 29
+    assert sum(out["counts"].values()) == 2
+    assert out["age"] == 29
+
+
+def test_one_known_date_repeats_as_a_one_day_window_each_year():
+    # Annual with no months and only one date of a cycle: that date is both start and end.
+    until = date(2028, 12, 31)
+    only_close = windows(
+        {"recurrence": "annual", "close_date": "2026-03-31"}, TODAY, until
+    )
+    assert only_close == (
+        [
+            (date(2027, 3, 31), date(2027, 3, 31)),
+            (date(2028, 3, 31), date(2028, 3, 31)),
+        ],
+        True,
+    )
+    only_open = windows(
+        {"recurrence": "annual", "open_date": "2026-02-01"}, TODAY, until
+    )
+    assert only_open == (
+        [(date(2027, 2, 1), date(2027, 2, 1)), (date(2028, 2, 1), date(2028, 2, 1))],
+        True,
+    )
+
+
+def test_an_opportunity_without_an_id_has_no_status():
+    rows = [opp(id=None, slug="unsaved", max_age=30)]
+    out = radar(rows, THAI_29, TODAY, statuses={1: {"status": "applied"}})
+    assert out["buckets"]["closing_by_age"][0]["my_status"] is None
