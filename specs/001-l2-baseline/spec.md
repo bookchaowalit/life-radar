@@ -89,6 +89,13 @@ Big Loop Plan Wave 2 (solo-empire `repository-catalog/roadmaps/BIG-LOOP-PLAN-202
 - **Then** that date is a one-day window in each later year (behaviour kept through the type-check refactor)
 - **Test:** `tests/test_rules.py::test_one_known_date_repeats_as_a_one_day_window_each_year` · level: integration (API + throwaway PostgreSQL)
 
+### AC-09 — Numbers fit their columns
+
+- **Given** an int field (PostgreSQL integer) or a real field
+- **When** a client sends 2**31, or NaN / Infinity / 1e400 as raw JSON
+- **Then** the API answers 422 naming the field (before: a 500 from PostgreSQL, or the value silently stored as null)
+- **Test:** `tests/test_contract.py::test_numbers_fit_their_columns` · level: integration (API + throwaway PostgreSQL)
+
 ## 4. Interfaces and data
 
 | Interface | Change | Contract |
@@ -131,6 +138,7 @@ Big Loop Plan Wave 2 (solo-empire `repository-catalog/roadmaps/BIG-LOOP-PLAN-202
 | AC-06 | `tests/test_radar_validation.py::test_new_opportunity_defaults` | characterization (behaviour already present; passed on first run) | CI run of the pushed tip | none |
 | AC-07 | `tests/test_radar_validation.py::test_opportunities_are_listed_by_slug` | characterization (behaviour already present; passed on first run) | CI run of the pushed tip | none |
 | AC-08 | `tests/test_rules.py::test_one_known_date_repeats_as_a_one_day_window_each_year` | characterization (behaviour already present; passed on first run) | CI run of the pushed tip | none |
+| AC-09 | `tests/test_contract.py::test_numbers_fit_their_columns` | 5ac199b · `.venv/bin/pytest -q -k numbers_fit` · `psycopg.errors.NumericValueOutOfRange: integer out of range` | CI run of the pushed tip | none |
 
 ## 7. Risks and open questions
 
