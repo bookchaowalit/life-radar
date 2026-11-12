@@ -21,8 +21,10 @@ jobs:
       # The image runs 3.13, but the tests' embedded PostgreSQL (pgserver, dev extra) only ships
       # wheels up to cp312. Move to 3.13 once pgserver does.
       python-version: "3.12"
-      # Ratchet: measured 90.13% on 2026-11-05 (threshold = measured - 2, rounded down); raise it as tests grow.
-      coverage-threshold: "88"
+      # Ratchet: measured 57.76% on 2026-11-12 over src + the platform-cellkit code the tests exercise
+      # (threshold = measured - 2, rounded down). Was 88 when the vendored kit and its own tests lived here;
+      # owner-approved DoD exception 2026-11-12 (scope change, the kit's 93% gate is in platform-cellkit).
+      coverage-threshold: "55"
       # Same as the old test.yml: validate the seed catalogue, then run the tests.
       test-command: radar-seed check && python -m pytest -q --cov --cov-report=
 
