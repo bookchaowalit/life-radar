@@ -12,12 +12,12 @@ from datetime import date
 from typing import Annotated, Any, Literal, get_args
 
 import psycopg
+from cellkit.app import Context
+from cellkit.auth import Principal
 from fastapi import HTTPException, Query
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel, ConfigDict, Field
 
-from cellkit.app import Context
-from cellkit.auth import Principal
 from life_radar.rules import EDUCATION, Person, radar
 
 MAX_ROWS = 20_000  # catalog rows per workspace; a bigger one gets 413 instead of an unbounded scan

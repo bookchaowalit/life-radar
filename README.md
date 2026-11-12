@@ -7,7 +7,7 @@ universal shape, matched against a profile so you see what closes for good, what
 preparing now, what is open today and what will always be there.
 
 The Life Radar cell has its own API and its own database, described by `cell.yaml` and served by
-the cell kit in `src/cellkit/` (this repository's own copy, taken from `life-opportunities-api`).
+the pinned [platform-cellkit](https://github.com/bookchaowalit/platform-cellkit) package.
 It reuses empire-platform for identity, authorization, executions and audit over HTTP with the
 caller's token. Cell-specific code is in `src/life_radar/`.
 
@@ -126,7 +126,7 @@ EMPIRE_DB_MODE=hosted .venv/bin/empire-automations provision --workspace owner \
 ```
 
 Railway variables: `SENTRY_DSN` (error reporting; unset = off, see
-`src/cellkit/_sentry.py`), `RADAR_DB_MODE=hosted`, `RADAR_DB_URL_API`, `RADAR_JWT_PUBLIC_KEY_PEM` (or
+`cellkit/_sentry.py` in platform-cellkit), `RADAR_DB_MODE=hosted`, `RADAR_DB_URL_API`, `RADAR_JWT_PUBLIC_KEY_PEM` (or
 `RADAR_JWT_JWKS_URL`), `RADAR_JWT_ISSUER`, `EMPIRE_PLATFORM_URL`.
 
 Docs: [`PRODUCT.md`](PRODUCT.md) (product brief, roadmap) and [`DOCPACK/`](DOCPACK/) (product card).

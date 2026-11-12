@@ -24,12 +24,11 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
 import yaml
+from cellkit.app import models
+from cellkit.spec import Cell, Resource
 from fastapi.encoders import jsonable_encoder
 from psycopg.types.json import Jsonb
 from pydantic import ValidationError
-
-from cellkit.app import models
-from cellkit.spec import Cell, Resource
 
 if TYPE_CHECKING:  # annotations only; httpx is imported where the api mode needs it
     import httpx
@@ -225,9 +224,8 @@ def main(argv: list[str] | None = None) -> int:
                 file=sys.stderr,
             )
             return 2
-        from psycopg.rows import dict_row
-
         from cellkit.db import default_cluster
+        from psycopg.rows import dict_row
 
         with default_cluster(spec).connect(spec.role("api")) as conn:
             conn.row_factory = dict_row
